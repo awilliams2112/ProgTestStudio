@@ -1,6 +1,6 @@
 ﻿namespace ProgTestStudio
 {
-    partial class UIAction
+    partial class ActionControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -52,14 +52,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "{Description}";
             // 
-            // UIAction
+            // ActionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nameLbl);
-            this.Name = "UIAction";
+            this.Name = "ActionControl";
             this.Size = new System.Drawing.Size(154, 60);
             this.ResumeLayout(false);
             this.PerformLayout();

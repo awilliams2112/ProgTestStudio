@@ -1,6 +1,6 @@
 ﻿namespace ProgTestStudio
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -55,9 +55,11 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.uiAction1 = new ProgTestStudio.UIAction();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.uiAction1 = new ProgTestStudio.ActionControl();
             this.arrowControl1 = new ProgTestStudio.ArrowControl();
-            this.uiAction2 = new ProgTestStudio.UIAction();
+            this.uiAction2 = new ProgTestStudio.ActionControl();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -111,6 +113,7 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.openToolStripMenuItem.Text = "Open Project";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // openFileToolStripMenuItem
             // 
@@ -123,6 +126,7 @@
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
@@ -206,8 +210,6 @@
             this.treeView1.Size = new System.Drawing.Size(508, 233);
             this.treeView1.TabIndex = 2;
             this.treeView1.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeView1_ItemDrag);
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
-            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
             // label1
             // 
@@ -255,8 +257,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(999, 637);
             this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.flowLayoutPanel1_DragDrop);
-            this.flowLayoutPanel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.flowLayoutPanel1_DragEnter);
             // 
             // tabPage2
             // 
@@ -269,6 +269,10 @@
             this.tabPage2.Text = "NewTab";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // uiAction1
             // 
             this.uiAction1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -277,7 +281,6 @@
             this.uiAction1.Name = "uiAction1";
             this.uiAction1.Size = new System.Drawing.Size(230, 118);
             this.uiAction1.TabIndex = 0;
-            this.uiAction1.DoubleClick += new System.EventHandler(this.uiAction1_DoubleClick);
             // 
             // arrowControl1
             // 
@@ -297,7 +300,7 @@
             this.uiAction2.Size = new System.Drawing.Size(230, 118);
             this.uiAction2.TabIndex = 0;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,8 +309,7 @@
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Progressive Test Studioes";
             this.menuStrip1.ResumeLayout(false);
@@ -341,13 +343,15 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TreeView treeView1;
-        private UIAction uiAction1;
+        private ActionControl uiAction1;
         private ArrowControl arrowControl1;
-        private UIAction uiAction2;
+        private ActionControl uiAction2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProgTestStudio.Model;
 
 namespace ProgTestStudio
 {
-    public partial class UIAction : UserControl
+    public partial class ActionControl : UserControl
     {
-        public UIAction()
+        TestAction testAction;
+
+        public ActionControl()
         {
             InitializeComponent();
             Size = new Size(154, 60);
+            
         }
 
         public string DisplayName
