@@ -34,7 +34,7 @@ namespace ProgTestStudio
                 this.FlowPanel.Controls.Add(new ArrowControl());
             }
 
-            var uiAction = new ActionControl
+            var uiAction = new ActionControl()
             {
                 BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle,
                 Location = new System.Drawing.Point(5, 5),
@@ -46,7 +46,7 @@ namespace ProgTestStudio
 
             uiAction.DoubleClick += (object sender1, EventArgs e1) =>
             {
-                AddTask task = new AddTask();
+                ActionEditor task = new ActionEditor();
                 task.ShowDialog();
             };
 

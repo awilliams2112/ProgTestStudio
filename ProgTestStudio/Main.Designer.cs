@@ -201,8 +201,6 @@
             this.treeView1.Size = new System.Drawing.Size(381, 190);
             this.treeView1.TabIndex = 2;
             this.treeView1.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeView1_ItemDrag);
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
-            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
             // label1
             // 
@@ -247,8 +245,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(747, 514);
             this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.flowLayoutPanel1_DragDrop);
-            this.flowLayoutPanel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.flowLayoutPanel1_DragEnter);
             // 
             // tabPage2
             // 
@@ -270,7 +266,6 @@
             this.uiAction1.Name = "uiAction1";
             this.uiAction1.Size = new System.Drawing.Size(230, 118);
             this.uiAction1.TabIndex = 0;
-            this.uiAction1.DoubleClick += new System.EventHandler(this.uiAction1_DoubleClick);
             // 
             // arrowControl1
             // 

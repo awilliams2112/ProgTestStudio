@@ -16,7 +16,7 @@ namespace ProgTestStudio
         {
             InitializeComponent();
 
-            Size = new Size(154, 60);
+            Size = new Size(80, 45);
         }
     }
 }

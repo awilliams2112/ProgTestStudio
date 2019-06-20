@@ -1,6 +1,6 @@
 ﻿namespace ProgTestStudio
 {
-    partial class AddTask
+    partial class ActionEditor
     {
         /// <summary>
         /// Required designer variable.

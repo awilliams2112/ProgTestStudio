@@ -37,7 +37,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = global::ProgTestStudio.Properties.Resources.PNGPIX_COM_Arrow_Transparent_PNG_Image_3_500x391;
+            this.pictureBox1.Image = global::ProgTestStudio.Properties.Resources.iconfinder_Arrow_Forward_1063879;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(239, 149);

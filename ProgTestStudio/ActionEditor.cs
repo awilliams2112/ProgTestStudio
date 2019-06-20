@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProgTestStudio
 {
-    public partial class AddTask : Form
+    public partial class ActionEditor : Form
     {
-        public AddTask()
+        public ActionEditor()
         {
             InitializeComponent();
         }

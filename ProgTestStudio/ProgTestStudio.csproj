@@ -58,11 +58,11 @@
     <Compile Include="ActionListTreeView.Designer.cs">
       <DependentUpon>ActionListTreeView.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddTask.cs">
+    <Compile Include="ActionEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTask.Designer.cs">
-      <DependentUpon>AddTask.cs</DependentUpon>
+    <Compile Include="ActionEditor.Designer.cs">
+      <DependentUpon>ActionEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="ArrowControl.cs">
       <SubType>UserControl</SubType>
@@ -76,6 +76,7 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\TestAction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ActionControl.cs">
@@ -94,8 +95,8 @@
     <EmbeddedResource Include="ActionListTreeView.resx">
       <DependentUpon>ActionListTreeView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTask.resx">
-      <DependentUpon>AddTask.cs</DependentUpon>
+    <EmbeddedResource Include="ActionEditor.resx">
+      <DependentUpon>ActionEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ArrowControl.resx">
       <DependentUpon>ArrowControl.cs</DependentUpon>
@@ -131,6 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PNGPIX-COM-Arrow-Transparent-PNG-Image-3-500x391.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Arrow_Forward_1063879.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

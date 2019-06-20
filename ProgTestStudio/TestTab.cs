@@ -11,20 +11,22 @@ namespace ProgTestStudio
     public class TestTab : TabPage
     {
         ActionFlowControl actionFlowControl;
+        string testName;
 
         public TestTab() : base("*New Test")
         {
+            testName = this.Text;
             InitializeComponents();
         }
 
         public void InitializeComponents()
         {
+
             this.Location = new System.Drawing.Point(4, 22);
-            this.Name = "tabPage1";
+            this.Name = testName;
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Size = new System.Drawing.Size(753, 520);
             this.TabIndex = 0;
-            this.Text = "tabPage1";
             this.UseVisualStyleBackColor = true;
 
             actionFlowControl = new ActionFlowControl();
