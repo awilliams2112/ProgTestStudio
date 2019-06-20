@@ -15,6 +15,8 @@ namespace ProgTestStudio
         public ArrowControl()
         {
             InitializeComponent();
+
+            Size = new Size(154, 60);
         }
     }
 }

@@ -15,8 +15,21 @@ namespace ProgTestStudio
         public UIAction()
         {
             InitializeComponent();
+            Size = new Size(154, 60);
         }
 
-        public string DisplayName { get; internal set; }
+        public string DisplayName
+        {
+            get
+            {
+                return nameLbl.Text;
+            }
+            set
+            {
+                nameLbl.Text = value;
+            }
+        }
+
+        public string Description { get; set; }
     }
 }

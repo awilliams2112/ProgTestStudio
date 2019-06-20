@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("SQL");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("RestCall");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("SoapCall");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Base", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Custom");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("SQL");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("RestCall");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("SoapCall");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Base", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Custom");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,37 +95,38 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New Project";
             // 
             // newTestToolStripMenuItem
             // 
             this.newTestToolStripMenuItem.Name = "newTestToolStripMenuItem";
-            this.newTestToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.newTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newTestToolStripMenuItem.Text = "New Test";
+            this.newTestToolStripMenuItem.Click += new System.EventHandler(this.newTestToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open Project";
             // 
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openFileToolStripMenuItem.Text = "Open File";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             // 
             // editToolStripMenuItem
@@ -183,20 +184,20 @@
             this.treeView1.ItemHeight = 30;
             this.treeView1.Location = new System.Drawing.Point(0, 23);
             this.treeView1.Name = "treeView1";
-            treeNode6.Name = "Node1";
-            treeNode6.Text = "SQL";
-            treeNode7.Name = "Node2";
-            treeNode7.Text = "RestCall";
-            treeNode8.Name = "Node3";
-            treeNode8.Text = "SoapCall";
-            treeNode8.ToolTipText = "SoapCall";
-            treeNode9.Name = "Node0";
-            treeNode9.Text = "Base";
-            treeNode10.Name = "Node4";
-            treeNode10.Text = "Custom";
+            treeNode1.Name = "Node1";
+            treeNode1.Text = "SQL";
+            treeNode2.Name = "Node2";
+            treeNode2.Text = "RestCall";
+            treeNode3.Name = "Node3";
+            treeNode3.Text = "SoapCall";
+            treeNode3.ToolTipText = "SoapCall";
+            treeNode4.Name = "Node0";
+            treeNode4.Text = "Base";
+            treeNode5.Name = "Node4";
+            treeNode5.Text = "Custom";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10});
+            treeNode4,
+            treeNode5});
             this.treeView1.Size = new System.Drawing.Size(381, 190);
             this.treeView1.TabIndex = 2;
             this.treeView1.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeView1_ItemDrag);
@@ -232,7 +233,7 @@
             this.tabPage1.Controls.Add(this.flowLayoutPanel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(753, 520);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
@@ -253,7 +254,7 @@
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(753, 520);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "NewTab";
@@ -262,6 +263,8 @@
             // uiAction1
             // 
             this.uiAction1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uiAction1.Description = null;
+            this.uiAction1.DisplayName = "{Name}";
             this.uiAction1.Location = new System.Drawing.Point(4, 4);
             this.uiAction1.Margin = new System.Windows.Forms.Padding(4);
             this.uiAction1.Name = "uiAction1";
@@ -281,6 +284,8 @@
             // uiAction2
             // 
             this.uiAction2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uiAction2.Description = null;
+            this.uiAction2.DisplayName = "{Name}";
             this.uiAction2.Location = new System.Drawing.Point(364, 4);
             this.uiAction2.Margin = new System.Windows.Forms.Padding(4);
             this.uiAction2.Name = "uiAction2";

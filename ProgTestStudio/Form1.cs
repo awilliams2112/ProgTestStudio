@@ -67,10 +67,7 @@ namespace ProgTestStudio
             if(this.flowLayoutPanel1.Controls.Count > 0 &&
                this.flowLayoutPanel1.Controls[this.flowLayoutPanel1.Controls.Count - 1] is UIAction)
             {
-                this.flowLayoutPanel1.Controls.Add(new ArrowControl
-                {
-                    Size = new Size(152, 145)
-                });
+                this.flowLayoutPanel1.Controls.Add(new ArrowControl());
             }
 
             var uiAction = new UIAction
@@ -80,8 +77,7 @@ namespace ProgTestStudio
                 Margin = new System.Windows.Forms.Padding(5),
                 Name = "uiAction1",
                 TabIndex = 0,
-                DisplayName = actionTreeNode.Name,
-                Size = new Size(306, 145),
+                DisplayName = actionTreeNode.Text.Trim(),
             };
 
             uiAction.DoubleClick += (object sender1, EventArgs e1) =>
@@ -101,6 +97,11 @@ namespace ProgTestStudio
         private void uiAction1_DoubleClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void newTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(new TabPage("*NewTab"));
         }
     }
 
