@@ -35,23 +35,7 @@ namespace ProgTestStudio
                 this.FlowPanel.Controls.Add(new ArrowControl());
             }
 
-            var uiAction = new ActionControl()
-            {
-                BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle,
-                Location = new System.Drawing.Point(5, 5),
-                Margin = new System.Windows.Forms.Padding(5),
-                Name = "uiAction1",
-                TabIndex = 0,
-                DisplayName = actionTreeNode.Text.Trim(),
-            };
-
-            uiAction.DoubleClick += (object sender1, EventArgs e1) =>
-            {
-                ActionEditor task = new ActionEditor();
-                //task.PopulateForm();
-                task.ShowDialog();
-            };
-
+            var actionControl = new ActionControl(actionTreeNode.Text);
             this.FlowPanel.Controls.Add(actionControl);
         }
 
