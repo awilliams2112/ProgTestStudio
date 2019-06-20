@@ -30,7 +30,7 @@ namespace ProgTestStudio
             });
 
             this.tabControl1.TabPages.Clear();
-            this.flowLayoutPanel1.Controls.Clear();
+            this.tabControl1.TabPages.Add(new TestTab());
         }
 
         #region private methods
