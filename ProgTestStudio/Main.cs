@@ -45,6 +45,16 @@ namespace ProgTestStudio
         {
             tabControl1.TabPages.Add(new TestTab());
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
     }
 
     public class ActionCategoryNode : TreeNode
