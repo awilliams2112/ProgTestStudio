@@ -55,6 +55,12 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActionEditor_Custom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionEditor_Custom.Designer.cs">
+      <DependentUpon>ActionEditor_Custom.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActionEditor_Sql.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,7 @@
     <Compile Include="ArrowControl.Designer.cs">
       <DependentUpon>ArrowControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\BusinessLogic.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +99,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ActionBase.cs" />
+    <Compile Include="Model\CustomAction.cs" />
     <Compile Include="Model\ProjectFile.cs" />
     <Compile Include="Model\ProjectTest.cs" />
     <Compile Include="Model\TestAction.cs" />
@@ -123,6 +131,9 @@
     <Compile Include="HintTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ActionEditor_Custom.resx">
+      <DependentUpon>ActionEditor_Custom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActionEditor_Sql.resx">
       <DependentUpon>ActionEditor_Sql.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,9 +184,7 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_Arrow_Forward_1063879.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\rest.png" />
   </ItemGroup>
