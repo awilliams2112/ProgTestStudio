@@ -22,6 +22,8 @@ namespace ProgTestStudio
 
         public ActionControl(string actionType)
         {
+            InitializeComponent();
+
             BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             Location = new System.Drawing.Point(5, 5);
             Margin = new System.Windows.Forms.Padding(5);
