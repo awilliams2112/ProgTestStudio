@@ -18,8 +18,23 @@ namespace ProgTestStudio
         public ActionControl()
         {
             InitializeComponent();
+        }
+
+        public ActionControl(string actionType)
+        {
+            BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            Location = new System.Drawing.Point(5, 5);
+            Margin = new System.Windows.Forms.Padding(5);
+            Name = "uiAction1";
+            TabIndex = 0;
+            DisplayName = actionType;
             Size = new Size(154, 60);
             
+            DoubleClick += (object sender1, EventArgs e1) =>
+            {
+                 ActionEditor task = new ActionEditor();
+                 task.ShowDialog();
+            };
         }
 
         public string DisplayName

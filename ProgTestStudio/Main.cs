@@ -24,7 +24,6 @@ namespace ProgTestStudio
                     {
                         new ActionTreeNode("SQL            "),
                         new ActionTreeNode("Rest           "),
-                        new ActionTreeNode("Saop           "),
                         new ActionTreeNode("Assert         ")
                     }),
             });
