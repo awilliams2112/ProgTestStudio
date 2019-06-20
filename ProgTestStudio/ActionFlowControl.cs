@@ -36,7 +36,6 @@ namespace ProgTestStudio
             }
 
             var actionControl = new ActionControl(actionTreeNode.Text);
-
             this.FlowPanel.Controls.Add(actionControl);
         }
 

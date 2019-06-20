@@ -55,6 +55,12 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActionEditor_Sql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionEditor_Sql.Designer.cs">
+      <DependentUpon>ActionEditor_Sql.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActionFlowControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +105,11 @@
     <Compile Include="ActionControl.Designer.cs">
       <DependentUpon>ActionControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TextEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +120,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UITestPanel.cs" />
-    <Compile Include="View\HintTextBox.cs">
+    <Compile Include="HintTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ActionEditor_Sql.resx">
+      <DependentUpon>ActionEditor_Sql.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActionFlowControl.resx">
       <DependentUpon>ActionFlowControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,17 +140,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="ActionControl.resx">
       <DependentUpon>ActionControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

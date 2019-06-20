@@ -11,20 +11,19 @@ using System.Windows.Forms;
 
 namespace ProgTestStudio
 {
-    public partial class ActionEditor : Form
+    public partial class ActionEditor_Sql : Form
     {
-        public ActionEditor()
+        public ActionEditor_Sql()
         {
             InitializeComponent();
         }
 
-        public void PopulateForm(RestAction model)
+        public void PopulateForm(SqlAction model)
         {
-            TxtBoxUrl.Text = model.Url;
-            GridHeaders.DataSource = model.Headers;
-            RichPayload.Text = model.Payload;
+            TxtBoxConnection.Text = model.ConectionString;
+            GridParameters.DataSource = model.Args;
             TxtBoxName.Text = model.Name;
-            NumBoxPosition.Value = model.Position;
+            numericUpDown1.Value = model.Position;
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
