@@ -52,7 +52,7 @@ namespace ProgTestStudio
 
         #endregion
 
-        #region
+        #region events
 
         private void treeView1_ItemDrag(object sender, ItemDragEventArgs e)
         {
@@ -102,7 +102,10 @@ namespace ProgTestStudio
 
         #endregion
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 
     public class ActionCategoryNode : TreeNode
