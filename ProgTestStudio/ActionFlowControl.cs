@@ -15,6 +15,7 @@ namespace ProgTestStudio
         public ActionFlowControl()
         {
             InitializeComponent();
+
         }
 
         #region events
@@ -51,7 +52,7 @@ namespace ProgTestStudio
                 task.ShowDialog();
             };
 
-            this.FlowPanel.Controls.Add(uiAction);
+            this.FlowPanel.Controls.Add(actionControl);
         }
 
         /// <summary>

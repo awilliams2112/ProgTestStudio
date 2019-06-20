@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -83,6 +86,8 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ActionBase.cs" />
+    <Compile Include="Model\ProjectFile.cs" />
+    <Compile Include="Model\ProjectTest.cs" />
     <Compile Include="Model\TestAction.cs" />
     <Compile Include="Model\RestAction.cs" />
     <Compile Include="Model\SqlAction.cs" />
@@ -98,6 +103,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TextEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextEntryForm.Designer.cs">
+      <DependentUpon>TextEntryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TestTab.cs">
       <SubType>Component</SubType>
@@ -132,6 +143,10 @@
     <EmbeddedResource Include="ActionControl.resx">
       <DependentUpon>ActionControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TextEntryForm.resx">
+      <DependentUpon>TextEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

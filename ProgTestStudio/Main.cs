@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,14 +25,34 @@ namespace ProgTestStudio
                     {
                         new ActionTreeNode("SQL            "),
                         new ActionTreeNode("Rest           "),
-                        new ActionTreeNode("Saop           "),
                         new ActionTreeNode("Assert         ")
                     }),
             });
 
             this.tabControl1.TabPages.Clear();
-            this.flowLayoutPanel1.Controls.Clear();
+            this.tabControl1.TabPages.Add(new TestTab());
         }
+
+        #region private methods
+
+        private void OpenProfileFile(string fileName)
+        {
+            using (var stream = File.OpenText(fileName))
+            {
+                string content = stream.ReadToEnd();
+                
+                //read file
+            }
+        }
+
+        private void SaveProfileFile(string fileName)
+        {
+            File.WriteAllText(fileName, "sample test");
+        }
+
+        #endregion
+
+        #region
 
         private void treeView1_ItemDrag(object sender, ItemDragEventArgs e)
         {
@@ -44,17 +65,44 @@ namespace ProgTestStudio
         private void newTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl1.TabPages.Add(new TestTab());
+            tabControl1.SelectedTab = tabControl1.TabPages[tabControl1.TabPages.Count - 1];
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.ShowDialog();
+            saveFileDialog1.Filter = "Test Studio Projects |*.tsproj";
+
+            var dialogResult = saveFileDialog1.ShowDialog();
+            
+            if(dialogResult == DialogResult.OK)
+            {
+                SaveProfileFile(saveFileDialog1.FileName);
+            }
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+            openFileDialog1.FileName = string.Empty;
+            openFileDialog1.Multiselect = false;
+            openFileDialog1.Filter = "Test Studio Projects |*.tsproj";
+
+            var dialogResult = openFileDialog1.ShowDialog();
+
+            if(dialogResult == DialogResult.OK)
+            {
+                OpenProfileFile(openFileDialog1.FileName);
+            }
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutPage = new AboutForm();
+            aboutPage.ShowDialog();
+        }
+
+        #endregion
+
+
     }
 
     public class ActionCategoryNode : TreeNode

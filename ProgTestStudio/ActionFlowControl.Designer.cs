@@ -37,6 +37,7 @@
             this.FlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlowPanel.Location = new System.Drawing.Point(0, 0);
             this.FlowPanel.Name = "FlowPanel";
+            this.FlowPanel.Padding = new System.Windows.Forms.Padding(15);
             this.FlowPanel.Size = new System.Drawing.Size(515, 370);
             this.FlowPanel.TabIndex = 0;
             this.FlowPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.FlowPanel_DragDrop);
