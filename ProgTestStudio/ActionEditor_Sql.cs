@@ -21,6 +21,7 @@ namespace ProgTestStudio
         public void PopulateForm(SqlAction model)
         {
             TxtBoxConnection.Text = model.ConectionString;
+            RichStatement.Text = model.Statement;
             GridParameters.DataSource = model.Args;
             TxtBoxName.Text = model.Name;
             numericUpDown1.Value = model.Position;
@@ -29,6 +30,7 @@ namespace ProgTestStudio
         private void BtnOk_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
+            //Call method to save
             Close();
         }
 
