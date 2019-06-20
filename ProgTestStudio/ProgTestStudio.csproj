@@ -140,8 +140,10 @@
     <None Include="Resources\PNGPIX-COM-Arrow-Transparent-PNG-Image-3-500x391.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
     <None Include="Resources\iconfinder_Arrow_Forward_1063879.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

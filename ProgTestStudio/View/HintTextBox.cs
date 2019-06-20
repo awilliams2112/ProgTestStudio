@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace Calculator
+namespace ProgTestStudio.View
 {
     /// <summary>
     /// HintTextBox Class - to create a textbox control with a "hint" property.

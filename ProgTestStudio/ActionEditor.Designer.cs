@@ -1,4 +1,6 @@
-﻿namespace ProgTestStudio
+﻿using ProgTestStudio.View;
+
+namespace ProgTestStudio
 {
     partial class ActionEditor
     {
@@ -43,7 +45,7 @@
             this.LblPosition = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.TxtBoxUrl = new Calculator.HintTextBox();
+            this.TxtBoxUrl = new HintTextBox();
             this.RichPayload = new System.Windows.Forms.RichTextBox();
             this.GridHeaders = new System.Windows.Forms.DataGridView();
             this.ColKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,7 +86,6 @@
             // 
             this.GrpBoxDetails.Controls.Add(this.GridHeaders);
             this.GrpBoxDetails.Controls.Add(this.RichPayload);
-            this.GrpBoxDetails.Controls.Add(this.TxtBoxUrl);
             this.GrpBoxDetails.Controls.Add(this.LblPayload);
             this.GrpBoxDetails.Controls.Add(this.LblHeaders);
             this.GrpBoxDetails.Controls.Add(this.LblUrl);
@@ -299,6 +300,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColKey;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColValue;
         private System.Windows.Forms.RichTextBox RichPayload;
-        private Calculator.HintTextBox TxtBoxUrl;
+        private HintTextBox TxtBoxUrl;
     }
 }
