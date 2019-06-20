@@ -94,13 +94,15 @@ namespace ProgTestStudio
             }
         }
 
-        #endregion
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutPage = new AboutForm();
             aboutPage.ShowDialog();
         }
+
+        #endregion
+
+
     }
 
     public class ActionCategoryNode : TreeNode
