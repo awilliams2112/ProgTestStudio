@@ -1,6 +1,6 @@
 ﻿namespace ProgTestStudio
 {
-    partial class UIAction
+    partial class ActionControl
     {
         /// <summary> 
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProgTestStudio
 {
-    public partial class UIAction : UserControl
+    public partial class ActionControl : UserControl
     {
-        public UIAction()
+        public ActionControl()
         {
             InitializeComponent();
             Size = new Size(154, 60);

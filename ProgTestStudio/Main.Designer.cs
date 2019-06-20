@@ -1,6 +1,6 @@
 ﻿namespace ProgTestStudio
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -55,9 +55,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.uiAction1 = new ProgTestStudio.UIAction();
+            this.uiAction1 = new ProgTestStudio.ActionControl();
             this.arrowControl1 = new ProgTestStudio.ArrowControl();
-            this.uiAction2 = new ProgTestStudio.UIAction();
+            this.uiAction2 = new ProgTestStudio.ActionControl();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -292,7 +292,7 @@
             this.uiAction2.Size = new System.Drawing.Size(230, 118);
             this.uiAction2.TabIndex = 0;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,7 +301,7 @@
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Progressive Test Studioes";
             this.menuStrip1.ResumeLayout(false);
@@ -335,9 +335,9 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TreeView treeView1;
-        private UIAction uiAction1;
+        private ActionControl uiAction1;
         private ArrowControl arrowControl1;
-        private UIAction uiAction2;
+        private ActionControl uiAction2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

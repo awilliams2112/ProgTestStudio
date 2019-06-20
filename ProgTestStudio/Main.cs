@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProgTestStudio
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
 
@@ -29,6 +29,7 @@ namespace ProgTestStudio
                     }),
             });
 
+            this.tabControl1.TabPages.Clear();
             this.flowLayoutPanel1.Controls.Clear();
         }
 
@@ -57,36 +58,36 @@ namespace ProgTestStudio
 
         private void flowLayoutPanel1_DragEnter(object sender, DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Move; 
+            //e.Effect = DragDropEffects.Move; 
         }
 
         private void flowLayoutPanel1_DragDrop(object sender, DragEventArgs e)
         {
-            ActionTreeNode actionTreeNode = (ActionTreeNode)e.Data.GetData(typeof(ActionTreeNode));
+            //ActionTreeNode actionTreeNode = (ActionTreeNode)e.Data.GetData(typeof(ActionTreeNode));
             
-            if(this.flowLayoutPanel1.Controls.Count > 0 &&
-               this.flowLayoutPanel1.Controls[this.flowLayoutPanel1.Controls.Count - 1] is UIAction)
-            {
-                this.flowLayoutPanel1.Controls.Add(new ArrowControl());
-            }
+            //if(this.flowLayoutPanel1.Controls.Count > 0 &&
+            //   this.flowLayoutPanel1.Controls[this.flowLayoutPanel1.Controls.Count - 1] is ActionControl)
+            //{
+            //    this.flowLayoutPanel1.Controls.Add(new ArrowControl());
+            //}
 
-            var uiAction = new UIAction
-            {
-                BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle,
-                Location = new System.Drawing.Point(5, 5),
-                Margin = new System.Windows.Forms.Padding(5),
-                Name = "uiAction1",
-                TabIndex = 0,
-                DisplayName = actionTreeNode.Text.Trim(),
-            };
+            //var uiAction = new ActionControl
+            //{
+            //    BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle,
+            //    Location = new System.Drawing.Point(5, 5),
+            //    Margin = new System.Windows.Forms.Padding(5),
+            //    Name = "uiAction1",
+            //    TabIndex = 0,
+            //    DisplayName = actionTreeNode.Text.Trim(),
+            //};
 
-            uiAction.DoubleClick += (object sender1, EventArgs e1) =>
-            {
-                AddTask task = new AddTask();
-                task.ShowDialog();
-            };
+            //uiAction.DoubleClick += (object sender1, EventArgs e1) =>
+            //{
+            //    AddTask task = new AddTask();
+            //    task.ShowDialog();
+            //};
 
-            this.flowLayoutPanel1.Controls.Add(uiAction);
+            //this.flowLayoutPanel1.Controls.Add(uiAction);
         }
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -101,7 +102,7 @@ namespace ProgTestStudio
 
         private void newTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add(new TabPage("*NewTab"));
+            tabControl1.TabPages.Add(new TestTab());
         }
     }
 
