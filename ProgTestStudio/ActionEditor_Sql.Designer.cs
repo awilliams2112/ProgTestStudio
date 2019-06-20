@@ -38,6 +38,7 @@
             this.LblHeaders = new System.Windows.Forms.Label();
             this.LblUrl = new System.Windows.Forms.Label();
             this.SplitterDetails = new System.Windows.Forms.SplitContainer();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.TxtBoxName = new System.Windows.Forms.TextBox();
             this.LblPosition = new System.Windows.Forms.Label();
@@ -45,20 +46,21 @@
             this.LblTypeValue = new System.Windows.Forms.Label();
             this.LblType = new System.Windows.Forms.Label();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.PicLogo = new System.Windows.Forms.PictureBox();
+            this.RichStatement = new System.Windows.Forms.RichTextBox();
+            this.LblStatement = new System.Windows.Forms.Label();
             this.GrpBoxDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridParameters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).BeginInit();
             this.SplitterDetails.Panel1.SuspendLayout();
             this.SplitterDetails.Panel2.SuspendLayout();
             this.SplitterDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnOk
             // 
-            this.BtnOk.Location = new System.Drawing.Point(915, 508);
+            this.BtnOk.Location = new System.Drawing.Point(915, 514);
             this.BtnOk.Margin = new System.Windows.Forms.Padding(4);
             this.BtnOk.Name = "BtnOk";
             this.BtnOk.Size = new System.Drawing.Size(100, 28);
@@ -70,7 +72,7 @@
             // BtnCancel
             // 
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnCancel.Location = new System.Drawing.Point(51, 508);
+            this.BtnCancel.Location = new System.Drawing.Point(51, 514);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(100, 28);
@@ -81,13 +83,15 @@
             // 
             // GrpBoxDetails
             // 
+            this.GrpBoxDetails.Controls.Add(this.RichStatement);
+            this.GrpBoxDetails.Controls.Add(this.LblStatement);
             this.GrpBoxDetails.Controls.Add(this.TxtBoxConnection);
             this.GrpBoxDetails.Controls.Add(this.GridParameters);
             this.GrpBoxDetails.Controls.Add(this.LblHeaders);
             this.GrpBoxDetails.Controls.Add(this.LblUrl);
             this.GrpBoxDetails.Location = new System.Drawing.Point(13, 162);
             this.GrpBoxDetails.Name = "GrpBoxDetails";
-            this.GrpBoxDetails.Size = new System.Drawing.Size(1040, 323);
+            this.GrpBoxDetails.Size = new System.Drawing.Size(1040, 339);
             this.GrpBoxDetails.TabIndex = 1;
             this.GrpBoxDetails.TabStop = false;
             this.GrpBoxDetails.Text = "Action Details";
@@ -165,16 +169,26 @@
             this.SplitterDetails.SplitterDistance = 516;
             this.SplitterDetails.TabIndex = 2;
             // 
+            // PicLogo
+            // 
+            this.PicLogo.BackgroundImage = global::ProgTestStudio.Properties.Resources.sql;
+            this.PicLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PicLogo.Location = new System.Drawing.Point(21, 20);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(100, 100);
+            this.PicLogo.TabIndex = 11;
+            this.PicLogo.TabStop = false;
+            // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(160, 95);
+            this.numericUpDown1.Location = new System.Drawing.Point(277, 102);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(138, 22);
             this.numericUpDown1.TabIndex = 3;
             // 
             // TxtBoxName
             // 
-            this.TxtBoxName.Location = new System.Drawing.Point(160, 57);
+            this.TxtBoxName.Location = new System.Drawing.Point(277, 64);
             this.TxtBoxName.Name = "TxtBoxName";
             this.TxtBoxName.Size = new System.Drawing.Size(138, 22);
             this.TxtBoxName.TabIndex = 10;
@@ -182,7 +196,7 @@
             // LblPosition
             // 
             this.LblPosition.AutoSize = true;
-            this.LblPosition.Location = new System.Drawing.Point(66, 96);
+            this.LblPosition.Location = new System.Drawing.Point(183, 103);
             this.LblPosition.Name = "LblPosition";
             this.LblPosition.Size = new System.Drawing.Size(62, 17);
             this.LblPosition.TabIndex = 9;
@@ -191,7 +205,7 @@
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(79, 58);
+            this.LblName.Location = new System.Drawing.Point(196, 65);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(49, 17);
             this.LblName.TabIndex = 8;
@@ -200,7 +214,7 @@
             // LblTypeValue
             // 
             this.LblTypeValue.AutoSize = true;
-            this.LblTypeValue.Location = new System.Drawing.Point(157, 24);
+            this.LblTypeValue.Location = new System.Drawing.Point(274, 31);
             this.LblTypeValue.Name = "LblTypeValue";
             this.LblTypeValue.Size = new System.Drawing.Size(36, 17);
             this.LblTypeValue.TabIndex = 7;
@@ -209,7 +223,7 @@
             // LblType
             // 
             this.LblType.AutoSize = true;
-            this.LblType.Location = new System.Drawing.Point(41, 24);
+            this.LblType.Location = new System.Drawing.Point(158, 31);
             this.LblType.Name = "LblType";
             this.LblType.Size = new System.Drawing.Size(87, 17);
             this.LblType.TabIndex = 6;
@@ -226,14 +240,22 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // PicLogo
+            // RichStatement
             // 
-            this.PicLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PicLogo.Location = new System.Drawing.Point(378, 15);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(120, 120);
-            this.PicLogo.TabIndex = 11;
-            this.PicLogo.TabStop = false;
+            this.RichStatement.Location = new System.Drawing.Point(161, 251);
+            this.RichStatement.Name = "RichStatement";
+            this.RichStatement.Size = new System.Drawing.Size(768, 66);
+            this.RichStatement.TabIndex = 12;
+            this.RichStatement.Text = "";
+            // 
+            // LblStatement
+            // 
+            this.LblStatement.AutoSize = true;
+            this.LblStatement.Location = new System.Drawing.Point(66, 261);
+            this.LblStatement.Name = "LblStatement";
+            this.LblStatement.Size = new System.Drawing.Size(76, 17);
+            this.LblStatement.TabIndex = 11;
+            this.LblStatement.Text = "Statement:";
             // 
             // ActionEditor_Sql
             // 
@@ -264,8 +286,8 @@
             this.SplitterDetails.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).EndInit();
             this.SplitterDetails.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +312,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColValue;
         private HintTextBox TxtBoxConnection;
         private System.Windows.Forms.PictureBox PicLogo;
+        private System.Windows.Forms.RichTextBox RichStatement;
+        private System.Windows.Forms.Label LblStatement;
     }
 }

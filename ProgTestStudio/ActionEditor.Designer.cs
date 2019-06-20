@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActionEditor));
             this.BtnOk = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.GrpBoxDetails = new System.Windows.Forms.GroupBox();
+            this.GrpBoxMethod = new System.Windows.Forms.GroupBox();
+            this.RBtnPut = new System.Windows.Forms.RadioButton();
+            this.RBtnPost = new System.Windows.Forms.RadioButton();
+            this.RBtnGet = new System.Windows.Forms.RadioButton();
             this.TxtBoxUrl = new ProgTestStudio.HintTextBox();
             this.GridHeaders = new System.Windows.Forms.DataGridView();
             this.ColKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,27 +44,23 @@
             this.LblHeaders = new System.Windows.Forms.Label();
             this.LblUrl = new System.Windows.Forms.Label();
             this.SplitterDetails = new System.Windows.Forms.SplitContainer();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.NumBoxPosition = new System.Windows.Forms.NumericUpDown();
             this.TxtBoxName = new System.Windows.Forms.TextBox();
-            this.LblPosition = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
-            this.LblTypeValue = new System.Windows.Forms.Label();
             this.LblType = new System.Windows.Forms.Label();
+            this.LblTypeValue = new System.Windows.Forms.Label();
+            this.LblPosition = new System.Windows.Forms.Label();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.PicLogo = new System.Windows.Forms.PictureBox();
-            this.GrpBoxMethod = new System.Windows.Forms.GroupBox();
-            this.RBtnGet = new System.Windows.Forms.RadioButton();
-            this.RBtnPost = new System.Windows.Forms.RadioButton();
-            this.RBtnPut = new System.Windows.Forms.RadioButton();
             this.GrpBoxDetails.SuspendLayout();
+            this.GrpBoxMethod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridHeaders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).BeginInit();
             this.SplitterDetails.Panel1.SuspendLayout();
             this.SplitterDetails.Panel2.SuspendLayout();
             this.SplitterDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
-            this.GrpBoxMethod.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnOk
@@ -102,6 +101,51 @@
             this.GrpBoxDetails.TabIndex = 1;
             this.GrpBoxDetails.TabStop = false;
             this.GrpBoxDetails.Text = "Action Details";
+            // 
+            // GrpBoxMethod
+            // 
+            this.GrpBoxMethod.Controls.Add(this.RBtnPut);
+            this.GrpBoxMethod.Controls.Add(this.RBtnPost);
+            this.GrpBoxMethod.Controls.Add(this.RBtnGet);
+            this.GrpBoxMethod.Location = new System.Drawing.Point(889, 23);
+            this.GrpBoxMethod.Name = "GrpBoxMethod";
+            this.GrpBoxMethod.Size = new System.Drawing.Size(124, 101);
+            this.GrpBoxMethod.TabIndex = 10;
+            this.GrpBoxMethod.TabStop = false;
+            this.GrpBoxMethod.Text = "Method";
+            // 
+            // RBtnPut
+            // 
+            this.RBtnPut.AutoSize = true;
+            this.RBtnPut.Location = new System.Drawing.Point(8, 74);
+            this.RBtnPut.Name = "RBtnPut";
+            this.RBtnPut.Size = new System.Drawing.Size(57, 21);
+            this.RBtnPut.TabIndex = 2;
+            this.RBtnPut.TabStop = true;
+            this.RBtnPut.Text = "PUT";
+            this.RBtnPut.UseVisualStyleBackColor = true;
+            // 
+            // RBtnPost
+            // 
+            this.RBtnPost.AutoSize = true;
+            this.RBtnPost.Location = new System.Drawing.Point(7, 47);
+            this.RBtnPost.Name = "RBtnPost";
+            this.RBtnPost.Size = new System.Drawing.Size(67, 21);
+            this.RBtnPost.TabIndex = 1;
+            this.RBtnPost.TabStop = true;
+            this.RBtnPost.Text = "POST";
+            this.RBtnPost.UseVisualStyleBackColor = true;
+            // 
+            // RBtnGet
+            // 
+            this.RBtnGet.AutoSize = true;
+            this.RBtnGet.Location = new System.Drawing.Point(7, 20);
+            this.RBtnGet.Name = "RBtnGet";
+            this.RBtnGet.Size = new System.Drawing.Size(58, 21);
+            this.RBtnGet.TabIndex = 0;
+            this.RBtnGet.TabStop = true;
+            this.RBtnGet.Text = "GET";
+            this.RBtnGet.UseVisualStyleBackColor = true;
             // 
             // TxtBoxUrl
             // 
@@ -193,6 +237,16 @@
             this.SplitterDetails.SplitterDistance = 516;
             this.SplitterDetails.TabIndex = 2;
             // 
+            // PicLogo
+            // 
+            this.PicLogo.BackgroundImage = global::ProgTestStudio.Properties.Resources.rest;
+            this.PicLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PicLogo.Location = new System.Drawing.Point(23, 20);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(100, 120);
+            this.PicLogo.TabIndex = 12;
+            this.PicLogo.TabStop = false;
+            // 
             // NumBoxPosition
             // 
             this.NumBoxPosition.Location = new System.Drawing.Point(269, 97);
@@ -207,15 +261,6 @@
             this.TxtBoxName.Size = new System.Drawing.Size(138, 22);
             this.TxtBoxName.TabIndex = 10;
             // 
-            // LblPosition
-            // 
-            this.LblPosition.AutoSize = true;
-            this.LblPosition.Location = new System.Drawing.Point(175, 98);
-            this.LblPosition.Name = "LblPosition";
-            this.LblPosition.Size = new System.Drawing.Size(62, 17);
-            this.LblPosition.TabIndex = 9;
-            this.LblPosition.Text = "Position:";
-            // 
             // LblName
             // 
             this.LblName.AutoSize = true;
@@ -224,6 +269,15 @@
             this.LblName.Size = new System.Drawing.Size(49, 17);
             this.LblName.TabIndex = 8;
             this.LblName.Text = "Name:";
+            // 
+            // LblType
+            // 
+            this.LblType.AutoSize = true;
+            this.LblType.Location = new System.Drawing.Point(150, 26);
+            this.LblType.Name = "LblType";
+            this.LblType.Size = new System.Drawing.Size(87, 17);
+            this.LblType.TabIndex = 6;
+            this.LblType.Text = "Action Type:";
             // 
             // LblTypeValue
             // 
@@ -234,14 +288,14 @@
             this.LblTypeValue.TabIndex = 7;
             this.LblTypeValue.Text = "REST";
             // 
-            // LblType
+            // LblPosition
             // 
-            this.LblType.AutoSize = true;
-            this.LblType.Location = new System.Drawing.Point(150, 26);
-            this.LblType.Name = "LblType";
-            this.LblType.Size = new System.Drawing.Size(87, 17);
-            this.LblType.TabIndex = 6;
-            this.LblType.Text = "Action Type:";
+            this.LblPosition.AutoSize = true;
+            this.LblPosition.Location = new System.Drawing.Point(175, 98);
+            this.LblPosition.Name = "LblPosition";
+            this.LblPosition.Size = new System.Drawing.Size(62, 17);
+            this.LblPosition.TabIndex = 9;
+            this.LblPosition.Text = "Position:";
             // 
             // BtnDelete
             // 
@@ -253,61 +307,6 @@
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // PicLogo
-            // 
-            this.PicLogo.BackgroundImage = global::ProgTestStudio.Properties.Resources.rest;
-            this.PicLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PicLogo.Location = new System.Drawing.Point(23, 20);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(100, 100);
-            this.PicLogo.TabIndex = 12;
-            this.PicLogo.TabStop = false;
-            // 
-            // GrpBoxMethod
-            // 
-            this.GrpBoxMethod.Controls.Add(this.RBtnPut);
-            this.GrpBoxMethod.Controls.Add(this.RBtnPost);
-            this.GrpBoxMethod.Controls.Add(this.RBtnGet);
-            this.GrpBoxMethod.Location = new System.Drawing.Point(889, 23);
-            this.GrpBoxMethod.Name = "GrpBoxMethod";
-            this.GrpBoxMethod.Size = new System.Drawing.Size(124, 101);
-            this.GrpBoxMethod.TabIndex = 10;
-            this.GrpBoxMethod.TabStop = false;
-            this.GrpBoxMethod.Text = "Method";
-            // 
-            // RBtnGet
-            // 
-            this.RBtnGet.AutoSize = true;
-            this.RBtnGet.Location = new System.Drawing.Point(7, 20);
-            this.RBtnGet.Name = "RBtnGet";
-            this.RBtnGet.Size = new System.Drawing.Size(58, 21);
-            this.RBtnGet.TabIndex = 0;
-            this.RBtnGet.TabStop = true;
-            this.RBtnGet.Text = "GET";
-            this.RBtnGet.UseVisualStyleBackColor = true;
-            // 
-            // RBtnPost
-            // 
-            this.RBtnPost.AutoSize = true;
-            this.RBtnPost.Location = new System.Drawing.Point(7, 47);
-            this.RBtnPost.Name = "RBtnPost";
-            this.RBtnPost.Size = new System.Drawing.Size(67, 21);
-            this.RBtnPost.TabIndex = 1;
-            this.RBtnPost.TabStop = true;
-            this.RBtnPost.Text = "POST";
-            this.RBtnPost.UseVisualStyleBackColor = true;
-            // 
-            // RBtnPut
-            // 
-            this.RBtnPut.AutoSize = true;
-            this.RBtnPut.Location = new System.Drawing.Point(8, 74);
-            this.RBtnPut.Name = "RBtnPut";
-            this.RBtnPut.Size = new System.Drawing.Size(57, 21);
-            this.RBtnPut.TabIndex = 2;
-            this.RBtnPut.TabStop = true;
-            this.RBtnPut.Text = "PUT";
-            this.RBtnPut.UseVisualStyleBackColor = true;
             // 
             // ActionEditor
             // 
@@ -332,16 +331,16 @@
             this.TopMost = true;
             this.GrpBoxDetails.ResumeLayout(false);
             this.GrpBoxDetails.PerformLayout();
+            this.GrpBoxMethod.ResumeLayout(false);
+            this.GrpBoxMethod.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridHeaders)).EndInit();
             this.SplitterDetails.Panel1.ResumeLayout(false);
             this.SplitterDetails.Panel1.PerformLayout();
             this.SplitterDetails.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).EndInit();
             this.SplitterDetails.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
-            this.GrpBoxMethod.ResumeLayout(false);
-            this.GrpBoxMethod.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).EndInit();
             this.ResumeLayout(false);
 
         }
