@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -106,6 +107,58 @@ namespace ProgTestStudio
         {
 
         }
+
+        private void allToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunTests();
+        }
+
+        private void selectedTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunTests();
+        }
+
+        private void RunTests()
+        {
+            //simulate test
+
+            richTextBox1.Clear();
+
+            richTextBox1.AppendText("Running Test Suite...\n\n");
+            Application.DoEvents();
+            
+
+            this.Invoke(new Action(() =>
+            {
+                richTextBox1.AppendText("Running Test {TestName}...\n");
+                Application.DoEvents();
+
+                Thread.Sleep(500);
+            }));
+
+            richTextBox1.AppendText("Test {TestName} Passed\n\n");
+
+            this.Invoke(new Action(() =>
+            {
+                richTextBox1.AppendText("Running Test {TestName}...\n");
+                Application.DoEvents();
+
+                Thread.Sleep(500);
+            }));
+            
+            richTextBox1.AppendText("Test {TestName} Passed\n\n");
+            
+            this.Invoke(new Action(() =>
+            {
+                richTextBox1.AppendText("Running Test {TestName}...\n");
+                Thread.Sleep(500);
+                Application.DoEvents();
+            }));
+
+            richTextBox1.AppendText("Test {TestName} Passed\n\n");
+
+        }
+
     }
 
     public class ActionCategoryNode : TreeNode
