@@ -1,18 +1,15 @@
-﻿using ProgTestStudio.Model;
+﻿using ProgTestStudio.Controller;
+using ProgTestStudio.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProgTestStudio
 {
     public partial class ActionEditor_Sql : Form
     {
+        private SqlAction _model;
+
         public ActionEditor_Sql()
         {
             InitializeComponent();
@@ -24,13 +21,24 @@ namespace ProgTestStudio
             RichStatement.Text = model.Statement;
             GridParameters.DataSource = model.Args;
             TxtBoxName.Text = model.Name;
-            numericUpDown1.Value = model.Position;
+            NumBoxPosition.Value = model.Position;
+
+            _model = model;
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-            //Call method to save
+
+            _model.ConectionString = TxtBoxConnection.Text;
+            _model.Name = TxtBoxName.Text;
+            _model.Statement = RichStatement.Text;
+            _model.Args = (Dictionary<string, string>)GridParameters.DataSource;
+
+            if (_model.Position != NumBoxPosition.Value)
+                BusinessLogic.Instance.ReconcilePosition(_model.Position, decimal.ToInt32(NumBoxPosition.Value));
+
+            BusinessLogic.Instance.Data[_model.Position] = _model;
             Close();
         }
 
@@ -46,7 +54,7 @@ namespace ProgTestStudio
 
             if (result.Equals(DialogResult.Yes))
             {
-                //Call method to delete action
+                BusinessLogic.Instance.Data.Remove(_model);
             }
             else
             {

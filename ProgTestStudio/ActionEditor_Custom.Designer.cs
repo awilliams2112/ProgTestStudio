@@ -1,6 +1,6 @@
 ﻿namespace ProgTestStudio
 {
-    partial class ActionEditor_Sql
+    partial class ActionEditor_Custom
     {
         /// <summary>
         /// Required designer variable.
@@ -31,36 +31,29 @@
             this.BtnOk = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.GrpBoxDetails = new System.Windows.Forms.GroupBox();
-            this.RichStatement = new System.Windows.Forms.RichTextBox();
-            this.LblStatement = new System.Windows.Forms.Label();
-            this.TxtBoxConnection = new ProgTestStudio.HintTextBox();
-            this.GridParameters = new System.Windows.Forms.DataGridView();
-            this.ColKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LblHeaders = new System.Windows.Forms.Label();
-            this.LblUrl = new System.Windows.Forms.Label();
+            this.RichPayload = new System.Windows.Forms.RichTextBox();
+            this.LblPayload = new System.Windows.Forms.Label();
             this.SplitterDetails = new System.Windows.Forms.SplitContainer();
-            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.NumBoxPosition = new System.Windows.Forms.NumericUpDown();
             this.TxtBoxName = new System.Windows.Forms.TextBox();
-            this.LblPosition = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
-            this.LblTypeValue = new System.Windows.Forms.Label();
             this.LblType = new System.Windows.Forms.Label();
+            this.LblTypeValue = new System.Windows.Forms.Label();
+            this.LblPosition = new System.Windows.Forms.Label();
             this.BtnDelete = new System.Windows.Forms.Button();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.GrpBoxDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridParameters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).BeginInit();
             this.SplitterDetails.Panel1.SuspendLayout();
             this.SplitterDetails.Panel2.SuspendLayout();
             this.SplitterDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnOk
             // 
-            this.BtnOk.Location = new System.Drawing.Point(915, 514);
+            this.BtnOk.Location = new System.Drawing.Point(915, 517);
             this.BtnOk.Margin = new System.Windows.Forms.Padding(4);
             this.BtnOk.Name = "BtnOk";
             this.BtnOk.Size = new System.Drawing.Size(100, 28);
@@ -72,7 +65,7 @@
             // BtnCancel
             // 
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnCancel.Location = new System.Drawing.Point(51, 514);
+            this.BtnCancel.Location = new System.Drawing.Point(46, 517);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(100, 28);
@@ -83,12 +76,8 @@
             // 
             // GrpBoxDetails
             // 
-            this.GrpBoxDetails.Controls.Add(this.RichStatement);
-            this.GrpBoxDetails.Controls.Add(this.LblStatement);
-            this.GrpBoxDetails.Controls.Add(this.TxtBoxConnection);
-            this.GrpBoxDetails.Controls.Add(this.GridParameters);
-            this.GrpBoxDetails.Controls.Add(this.LblHeaders);
-            this.GrpBoxDetails.Controls.Add(this.LblUrl);
+            this.GrpBoxDetails.Controls.Add(this.RichPayload);
+            this.GrpBoxDetails.Controls.Add(this.LblPayload);
             this.GrpBoxDetails.Location = new System.Drawing.Point(13, 162);
             this.GrpBoxDetails.Name = "GrpBoxDetails";
             this.GrpBoxDetails.Size = new System.Drawing.Size(1040, 339);
@@ -96,73 +85,22 @@
             this.GrpBoxDetails.TabStop = false;
             this.GrpBoxDetails.Text = "Action Details";
             // 
-            // RichStatement
+            // RichPayload
             // 
-            this.RichStatement.Location = new System.Drawing.Point(161, 251);
-            this.RichStatement.Name = "RichStatement";
-            this.RichStatement.Size = new System.Drawing.Size(768, 66);
-            this.RichStatement.TabIndex = 12;
-            this.RichStatement.Text = "";
+            this.RichPayload.Location = new System.Drawing.Point(140, 51);
+            this.RichPayload.Name = "RichPayload";
+            this.RichPayload.Size = new System.Drawing.Size(803, 247);
+            this.RichPayload.TabIndex = 7;
+            this.RichPayload.Text = "";
             // 
-            // LblStatement
+            // LblPayload
             // 
-            this.LblStatement.AutoSize = true;
-            this.LblStatement.Location = new System.Drawing.Point(66, 261);
-            this.LblStatement.Name = "LblStatement";
-            this.LblStatement.Size = new System.Drawing.Size(76, 17);
-            this.LblStatement.TabIndex = 11;
-            this.LblStatement.Text = "Statement:";
-            // 
-            // TxtBoxConnection
-            // 
-            this.TxtBoxConnection.Hint = "\"Data Source = PF2-SQL-qas; User ID=TestUser; Password=yourMom\"";
-            this.TxtBoxConnection.Location = new System.Drawing.Point(160, 67);
-            this.TxtBoxConnection.Name = "TxtBoxConnection";
-            this.TxtBoxConnection.Size = new System.Drawing.Size(769, 22);
-            this.TxtBoxConnection.TabIndex = 10;
-            // 
-            // GridParameters
-            // 
-            this.GridParameters.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridParameters.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.GridParameters.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.GridParameters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridParameters.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColKey,
-            this.ColValue});
-            this.GridParameters.Location = new System.Drawing.Point(160, 134);
-            this.GridParameters.Name = "GridParameters";
-            this.GridParameters.RowTemplate.Height = 24;
-            this.GridParameters.Size = new System.Drawing.Size(769, 74);
-            this.GridParameters.TabIndex = 8;
-            // 
-            // ColKey
-            // 
-            this.ColKey.HeaderText = "Key";
-            this.ColKey.Name = "ColKey";
-            // 
-            // ColValue
-            // 
-            this.ColValue.HeaderText = "Value";
-            this.ColValue.Name = "ColValue";
-            // 
-            // LblHeaders
-            // 
-            this.LblHeaders.AutoSize = true;
-            this.LblHeaders.Location = new System.Drawing.Point(47, 161);
-            this.LblHeaders.Name = "LblHeaders";
-            this.LblHeaders.Size = new System.Drawing.Size(85, 17);
-            this.LblHeaders.TabIndex = 4;
-            this.LblHeaders.Text = "Parameters:";
-            // 
-            // LblUrl
-            // 
-            this.LblUrl.AutoSize = true;
-            this.LblUrl.Location = new System.Drawing.Point(8, 68);
-            this.LblUrl.Name = "LblUrl";
-            this.LblUrl.Size = new System.Drawing.Size(124, 17);
-            this.LblUrl.TabIndex = 3;
-            this.LblUrl.Text = "Connection String:";
+            this.LblPayload.AutoSize = true;
+            this.LblPayload.Location = new System.Drawing.Point(61, 63);
+            this.LblPayload.Name = "LblPayload";
+            this.LblPayload.Size = new System.Drawing.Size(48, 17);
+            this.LblPayload.TabIndex = 5;
+            this.LblPayload.Text = "Script:";
             // 
             // SplitterDetails
             // 
@@ -174,10 +112,10 @@
             this.SplitterDetails.Panel1.Controls.Add(this.PicLogo);
             this.SplitterDetails.Panel1.Controls.Add(this.NumBoxPosition);
             this.SplitterDetails.Panel1.Controls.Add(this.TxtBoxName);
-            this.SplitterDetails.Panel1.Controls.Add(this.LblPosition);
             this.SplitterDetails.Panel1.Controls.Add(this.LblName);
-            this.SplitterDetails.Panel1.Controls.Add(this.LblTypeValue);
             this.SplitterDetails.Panel1.Controls.Add(this.LblType);
+            this.SplitterDetails.Panel1.Controls.Add(this.LblTypeValue);
+            this.SplitterDetails.Panel1.Controls.Add(this.LblPosition);
             // 
             // SplitterDetails.Panel2
             // 
@@ -186,65 +124,55 @@
             this.SplitterDetails.SplitterDistance = 516;
             this.SplitterDetails.TabIndex = 2;
             // 
-            // PicLogo
-            // 
-            this.PicLogo.BackgroundImage = global::ProgTestStudio.Properties.Resources.sql;
-            this.PicLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PicLogo.Location = new System.Drawing.Point(21, 20);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(100, 100);
-            this.PicLogo.TabIndex = 11;
-            this.PicLogo.TabStop = false;
-            // 
             // NumBoxPosition
             // 
-            this.NumBoxPosition.Location = new System.Drawing.Point(277, 102);
+            this.NumBoxPosition.Location = new System.Drawing.Point(269, 97);
             this.NumBoxPosition.Name = "NumBoxPosition";
             this.NumBoxPosition.Size = new System.Drawing.Size(138, 22);
             this.NumBoxPosition.TabIndex = 3;
             // 
             // TxtBoxName
             // 
-            this.TxtBoxName.Location = new System.Drawing.Point(277, 64);
+            this.TxtBoxName.Location = new System.Drawing.Point(269, 59);
             this.TxtBoxName.Name = "TxtBoxName";
             this.TxtBoxName.Size = new System.Drawing.Size(138, 22);
             this.TxtBoxName.TabIndex = 10;
             // 
-            // LblPosition
-            // 
-            this.LblPosition.AutoSize = true;
-            this.LblPosition.Location = new System.Drawing.Point(183, 103);
-            this.LblPosition.Name = "LblPosition";
-            this.LblPosition.Size = new System.Drawing.Size(62, 17);
-            this.LblPosition.TabIndex = 9;
-            this.LblPosition.Text = "Position:";
-            // 
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(196, 65);
+            this.LblName.Location = new System.Drawing.Point(188, 60);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(49, 17);
             this.LblName.TabIndex = 8;
             this.LblName.Text = "Name:";
             // 
-            // LblTypeValue
-            // 
-            this.LblTypeValue.AutoSize = true;
-            this.LblTypeValue.Location = new System.Drawing.Point(274, 31);
-            this.LblTypeValue.Name = "LblTypeValue";
-            this.LblTypeValue.Size = new System.Drawing.Size(36, 17);
-            this.LblTypeValue.TabIndex = 7;
-            this.LblTypeValue.Text = "SQL";
-            // 
             // LblType
             // 
             this.LblType.AutoSize = true;
-            this.LblType.Location = new System.Drawing.Point(158, 31);
+            this.LblType.Location = new System.Drawing.Point(150, 26);
             this.LblType.Name = "LblType";
             this.LblType.Size = new System.Drawing.Size(87, 17);
             this.LblType.TabIndex = 6;
             this.LblType.Text = "Action Type:";
+            // 
+            // LblTypeValue
+            // 
+            this.LblTypeValue.AutoSize = true;
+            this.LblTypeValue.Location = new System.Drawing.Point(266, 26);
+            this.LblTypeValue.Name = "LblTypeValue";
+            this.LblTypeValue.Size = new System.Drawing.Size(67, 17);
+            this.LblTypeValue.TabIndex = 7;
+            this.LblTypeValue.Text = "CUSTOM";
+            // 
+            // LblPosition
+            // 
+            this.LblPosition.AutoSize = true;
+            this.LblPosition.Location = new System.Drawing.Point(175, 98);
+            this.LblPosition.Name = "LblPosition";
+            this.LblPosition.Size = new System.Drawing.Size(62, 17);
+            this.LblPosition.TabIndex = 9;
+            this.LblPosition.Text = "Position:";
             // 
             // BtnDelete
             // 
@@ -257,7 +185,17 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // ActionEditor_Sql
+            // PicLogo
+            // 
+            this.PicLogo.BackgroundImage = global::ProgTestStudio.Properties.Resources.rest;
+            this.PicLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PicLogo.Location = new System.Drawing.Point(23, 20);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(100, 106);
+            this.PicLogo.TabIndex = 12;
+            this.PicLogo.TabStop = false;
+            // 
+            // ActionEditor_Custom
             // 
             this.AcceptButton = this.BtnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,21 +211,20 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ActionEditor_Sql";
+            this.Name = "ActionEditor_Custom";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Action Editor";
             this.TopMost = true;
             this.GrpBoxDetails.ResumeLayout(false);
             this.GrpBoxDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridParameters)).EndInit();
             this.SplitterDetails.Panel1.ResumeLayout(false);
             this.SplitterDetails.Panel1.PerformLayout();
             this.SplitterDetails.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).EndInit();
             this.SplitterDetails.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,20 +236,14 @@
         private System.Windows.Forms.GroupBox GrpBoxDetails;
         private System.Windows.Forms.SplitContainer SplitterDetails;
         private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.Label LblHeaders;
-        private System.Windows.Forms.Label LblUrl;
+        private System.Windows.Forms.Label LblPayload;
         private System.Windows.Forms.NumericUpDown NumBoxPosition;
         private System.Windows.Forms.TextBox TxtBoxName;
         private System.Windows.Forms.Label LblPosition;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Label LblTypeValue;
         private System.Windows.Forms.Label LblType;
-        private System.Windows.Forms.DataGridView GridParameters;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColKey;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColValue;
-        private HintTextBox TxtBoxConnection;
+        private System.Windows.Forms.RichTextBox RichPayload;
         private System.Windows.Forms.PictureBox PicLogo;
-        private System.Windows.Forms.RichTextBox RichStatement;
-        private System.Windows.Forms.Label LblStatement;
     }
 }

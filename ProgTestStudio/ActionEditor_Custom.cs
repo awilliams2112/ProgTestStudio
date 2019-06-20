@@ -1,44 +1,27 @@
 ﻿using ProgTestStudio.Controller;
 using ProgTestStudio.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProgTestStudio
 {
-    public partial class ActionEditor : Form
+    public partial class ActionEditor_Custom : Form
     {
-        private RestAction _model;
+        private CustomAction _model;
 
-        public ActionEditor()
+        public ActionEditor_Custom()
         {
             InitializeComponent();
         }
 
-        public void PopulateForm(RestAction model)
+        public void PopulateForm(CustomAction model)
         {
-            TxtBoxUrl.Text = model.Url;
-            GridHeaders.DataSource = model.Headers;
-            RichPayload.Text = model.Payload;
-            TxtBoxName.Text = model.Name;
-            NumBoxPosition.Value = model.Position;
-
             _model = model;
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-
-            _model.Headers = (Dictionary<string, string>)GridHeaders.DataSource;
-            _model.Name = TxtBoxName.Text;
-            _model.Payload = RichPayload.Text;
 
             if (_model.Position != NumBoxPosition.Value)
                 BusinessLogic.Instance.ReconcilePosition(_model.Position, decimal.ToInt32(NumBoxPosition.Value));
