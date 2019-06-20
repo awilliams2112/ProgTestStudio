@@ -73,9 +73,19 @@ namespace ProgTestStudio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PNGPIX_COM_Arrow_Transparent_PNG_Image_3_500x391 {
+        internal static System.Drawing.Bitmap rest {
             get {
-                object obj = ResourceManager.GetObject("PNGPIX-COM-Arrow-Transparent-PNG-Image-3-500x391", resourceCulture);
+                object obj = ResourceManager.GetObject("rest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sql {
+            get {
+                object obj = ResourceManager.GetObject("sql", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

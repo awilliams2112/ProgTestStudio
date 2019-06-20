@@ -3,13 +3,13 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace ProgTestStudio.View
+namespace ProgTestStudio
 {
     /// <summary>
     /// HintTextBox Class - to create a textbox control with a "hint" property.
     /// Uses InteropServices and PInvoke.
     /// </summary>
-    class HintTextBox : TextBox
+    public class HintTextBox : TextBox
     {
         //Configure dll
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
