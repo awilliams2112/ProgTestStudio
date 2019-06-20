@@ -120,4 +120,29 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAA
+        AAD///////////////////7//v78///////79uv/586M//n05f/////////+////////////////////
+        ///////////////////////////////////t2qn/4MBq/+DAbf/p05r///////79+///////////////
+        ///////////////////////////////+/v/hw3L/5Mh+///////x477/6NCR///////+/fv/////////
+        //////////////////////////7+///////37tr/4cJ2////////////8OG4/+jQj////////v78////
+        ///////////////////////////////+/v//////9+/a/+TJfv////////////Hiuv/o0ZL///////78
+        +P///////////////////////////////////v7///////fv2f/jx3z////////////y5cH/2rVQ//z5
+        8f///////v78/////v////////////////////////7+///////379n/5Mh8////////////8uXC/9y4
+        WP/gwGv/6tSb//7+/P/////////////////////////////+/v//////9+/Z/+TIfP////////////Dh
+        uf/p0pP//////+bNiv/fv2j//fv3//////////7//////////////v7///////fv2f/kyHz/////////
+        ///x473/59CP////////////5MiE//Llxf////////79//////////////7+///////379n/48d6////
+        ////////6dKZ/+jQk////////////+fOjf/z5sX////////+/f/////////////+/v//////9+/Y/+XL
+        g//9+vT/4cNz/+HCcP/8+fH///7+///////nzo3/8+bF/////////v3//////////////v7///////nz
+        5P/WrEH/4sR0//HivP///////v78//79+v//////48aA//Lmxv////////79////////////////////
+        ////////3rxh/+LEdP///v3////////////8+fD/5Mh+/+HDcv/+/fv//////////v//////////////
+        ///////////+///////v3rL/27ZV/+3aqP/t26v/3LhY/+7crv//////////////////////////////
+        ///////////////////+/vz///////369P/nz47/586L//z68////////v78/////v//////////////
+        //////////////////////////////7+/P///v7//////////////v7//v78////////////////////
+        ////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>
