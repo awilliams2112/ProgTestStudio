@@ -44,10 +44,8 @@ namespace ProgTestStudio
             {
                 BusinessLogic.Instance.Data.Remove(_model);
             }
-            else
-            {
-                Close();
-            }
+
+            Close();
         }
     }
 }

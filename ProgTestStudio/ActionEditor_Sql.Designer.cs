@@ -33,7 +33,6 @@
             this.GrpBoxDetails = new System.Windows.Forms.GroupBox();
             this.RichStatement = new System.Windows.Forms.RichTextBox();
             this.LblStatement = new System.Windows.Forms.Label();
-            this.TxtBoxConnection = new ProgTestStudio.HintTextBox();
             this.GridParameters = new System.Windows.Forms.DataGridView();
             this.ColKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,7 @@
             this.LblTypeValue = new System.Windows.Forms.Label();
             this.LblType = new System.Windows.Forms.Label();
             this.BtnDelete = new System.Windows.Forms.Button();
+            this.TxtBoxConnection = new ProgTestStudio.HintTextBox();
             this.GrpBoxDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridParameters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).BeginInit();
@@ -112,14 +112,6 @@
             this.LblStatement.Size = new System.Drawing.Size(76, 17);
             this.LblStatement.TabIndex = 11;
             this.LblStatement.Text = "Statement:";
-            // 
-            // TxtBoxConnection
-            // 
-            this.TxtBoxConnection.Hint = "\"Data Source = PF2-SQL-qas; User ID=TestUser; Password=yourMom\"";
-            this.TxtBoxConnection.Location = new System.Drawing.Point(160, 67);
-            this.TxtBoxConnection.Name = "TxtBoxConnection";
-            this.TxtBoxConnection.Size = new System.Drawing.Size(769, 22);
-            this.TxtBoxConnection.TabIndex = 10;
             // 
             // GridParameters
             // 
@@ -257,6 +249,14 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
+            // TxtBoxConnection
+            // 
+            this.TxtBoxConnection.Hint = "\"Data Source = PF2-SQL-qas; User ID=TestUser; Password=yourMom\"";
+            this.TxtBoxConnection.Location = new System.Drawing.Point(160, 67);
+            this.TxtBoxConnection.Name = "TxtBoxConnection";
+            this.TxtBoxConnection.Size = new System.Drawing.Size(769, 22);
+            this.TxtBoxConnection.TabIndex = 10;
+            // 
             // ActionEditor_Sql
             // 
             this.AcceptButton = this.BtnOk;
@@ -277,7 +277,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Action Editor";
-            this.TopMost = true;
             this.GrpBoxDetails.ResumeLayout(false);
             this.GrpBoxDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridParameters)).EndInit();

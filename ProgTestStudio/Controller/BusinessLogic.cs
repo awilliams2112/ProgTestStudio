@@ -1,24 +1,23 @@
 ﻿using ProgTestStudio.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProgTestStudio.Controller
 {
     public class BusinessLogic
     {
         private static BusinessLogic _instance;
-        
-        public List<ActionBase> Data { get; set; }
+
+        public List<ActionBase> Data { get; set; } = new List<ActionBase>();
 
         public static BusinessLogic Instance
         {
             get
             {
                 if (_instance == null)
-                    return new BusinessLogic();
+                {
+                    _instance = new BusinessLogic();
+                    return _instance;
+                }
                 else
                     return _instance;
             }

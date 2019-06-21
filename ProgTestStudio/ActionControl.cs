@@ -35,6 +35,7 @@ namespace ProgTestStudio
             DoubleClick += (object sender1, EventArgs e1) =>
             {
                  ActionEditor task = new ActionEditor();
+                 //task.PopulateForm();
                  task.ShowDialog();
             };
         }

@@ -19,6 +19,7 @@ namespace ProgTestStudio
         public ActionEditor()
         {
             InitializeComponent();
+            GridHeaders.DataSource = new Dictionary<string, string>();
         }
 
         public void PopulateForm(RestAction model)
@@ -61,10 +62,8 @@ namespace ProgTestStudio
             {
                 BusinessLogic.Instance.Data.Remove(_model);
             }
-            else
-            {
-                Close();
-            }
+
+            Close();
         }
     }
 }
