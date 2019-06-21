@@ -29,46 +29,52 @@
         private void InitializeComponent()
         {
             this.nameLbl = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // nameLbl
             // 
-            this.nameLbl.AutoSize = true;
-            this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLbl.Location = new System.Drawing.Point(15, 9);
+            this.nameLbl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLbl.Location = new System.Drawing.Point(44, 0);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(61, 17);
+            this.nameLbl.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.nameLbl.Size = new System.Drawing.Size(110, 60);
             this.nameLbl.TabIndex = 0;
-            this.nameLbl.Text = "{Name}";
+            this.nameLbl.Text = "Rest";
+            this.nameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nameLbl.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.nameLbl_MouseDoubleClick);
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "{Description}";
+            this.pictureBox1.Image = global::ProgTestStudio.Properties.Resources.iconfinder_language_326663__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDoubleClick);
             // 
             // ActionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nameLbl);
             this.Name = "ActionControl";
             this.Size = new System.Drawing.Size(154, 60);
+            this.DoubleClick += new System.EventHandler(this.ActionControl_DoubleClick);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label nameLbl;
-        private System.Windows.Forms.Label label2;
     }
 }

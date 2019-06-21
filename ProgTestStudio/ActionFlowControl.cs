@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProgTestStudio.Model;
 
 namespace ProgTestStudio
 {
@@ -35,7 +36,7 @@ namespace ProgTestStudio
                 this.FlowPanel.Controls.Add(new ArrowControl());
             }
 
-            var actionControl = new ActionControl(actionTreeNode.Text);
+            var actionControl = new ActionControl(Constants.GetActionTypeFromName(actionTreeNode.Text));
             this.FlowPanel.Controls.Add(actionControl);
         }
 

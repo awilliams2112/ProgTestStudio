@@ -14,14 +14,17 @@ namespace ProgTestStudio
     public partial class ActionControl : UserControl
     {
         TestAction testAction;
+        Constants.ActionTypes _actionType;
 
         public ActionControl()
         {
             InitializeComponent();
         }
 
-        public ActionControl(string actionType)
+        public ActionControl(Constants.ActionTypes actionType)
         {
+            _actionType = actionType;
+
             InitializeComponent();
 
             BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -29,15 +32,41 @@ namespace ProgTestStudio
             Margin = new System.Windows.Forms.Padding(5);
             Name = "uiAction1";
             TabIndex = 0;
-            DisplayName = actionType;
+            DisplayName = Constants.ActionTypeDefaultDescription(actionType);
             Size = new Size(154, 60);
-            
-            DoubleClick += (object sender1, EventArgs e1) =>
+
+            string imageLocation = string.Empty;
+
+            switch (actionType)
             {
-                 ActionEditor task = new ActionEditor();
-                 //task.PopulateForm();
-                 task.ShowDialog();
-            };
+                case Constants.ActionTypes.Sql:
+                    imageLocation = Constants.Images.SqlActionIcon;
+                    break;
+
+                case Constants.ActionTypes.Rest:
+                    imageLocation = Constants.Images.RestActionIcon;
+
+                    break;
+
+                case Constants.ActionTypes.Assert:
+                    imageLocation = "Resources\\iconfinder_language_326663.png";
+
+                    break;
+
+                case Constants.ActionTypes.Custom:
+                    imageLocation = "Resources\\iconfinder_language_326663.png";
+
+                    break;
+
+                default:
+                    break;
+            }
+            pictureBox1.ImageLocation = imageLocation;
+
+            //DoubleClick += (object sender1, EventArgs e1) =>
+            //{
+                 
+            //};
         }
 
         public string DisplayName
@@ -52,6 +81,61 @@ namespace ProgTestStudio
             }
         }
 
-        public string Description { get; set; }
+        private void ActionControl_DoubleClick(object sender, EventArgs e)
+        {
+            showEditorDialog();
+        }
+
+        private void nameLbl_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            showEditorDialog();
+        }
+
+        private void pictureBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            showEditorDialog();
+        }
+
+        private void showEditorDialog()
+        {
+            switch (_actionType)
+            {
+                case Constants.ActionTypes.Sql:
+
+                    new ActionEditor_Sql()
+                        .PopulateForm(new SqlAction())
+                        .ShowDialog();
+
+                    break;
+
+                case Constants.ActionTypes.Rest:
+
+                    new ActionEditor()
+                        .PopulateForm(new RestAction())
+                        .ShowDialog();
+
+                    break;
+
+                case Constants.ActionTypes.Assert:
+
+                    new ActionEditor_Sql()
+                        .PopulateForm(new SqlAction())
+                        .ShowDialog();
+
+                    break;
+
+                case Constants.ActionTypes.Custom:
+
+                    new ActionEditor_Custom()
+                        .PopulateForm(new CustomAction())
+                        .ShowDialog();
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProgTestStudio.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,17 +19,32 @@ namespace ProgTestStudio
         {
             InitializeComponent();
 
+            this.treeView1.ImageList = new ImageList();
+            this.treeView1.ImageList.Images.Add("sql", Image.FromFile(Constants.Images.SqlActionIcon));
+            this.treeView1.ImageList.Images.Add("rest", Image.FromFile(Constants.Images.RestActionIcon));
+
             this.treeView1.Nodes.Clear();
             this.treeView1.Nodes.AddRange(new TreeNode[]
             {
                 new TreeNode("Base",
                     new ActionTreeNode []
                     {
-                        new ActionTreeNode("SQL            "),
-                        new ActionTreeNode("Rest           "),
+                        new ActionTreeNode("SQL            ")
+                        {
+                            ImageKey = "sql"
+                        },
+                        new ActionTreeNode("Rest           ")
+                        {
+                            ImageKey = "rest"
+                        },
                         new ActionTreeNode("Assert         ")
+                        {
+                            ImageKey = Constants.Images.AssertActionIcon
+                        }
                     }),
             });
+
+            this.treeView1.ExpandAll();
 
             this.tabControl1.TabPages.Clear();
             this.tabControl1.TabPages.Add(new TestTab());
