@@ -189,7 +189,18 @@ namespace ProgTestStudio
 
             richTextBox1.Clear();
 
-            richTextBox1.AppendText("Running Test Suite...\n\n");
+            this.Invoke(new Action(() =>
+            {
+                richTextBox1.AppendText("Building... \n\n");
+                Application.DoEvents();
+
+                Thread.Sleep(1000);
+
+                Application.DoEvents();
+
+            }));
+
+            richTextBox1.AppendText("Running Suite...\n\n");
             Application.DoEvents();
             
 
