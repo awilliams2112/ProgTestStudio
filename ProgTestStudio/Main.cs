@@ -159,6 +159,24 @@ namespace ProgTestStudio
 
         }
 
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void powershellToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportCode exportCode = new ExportCode(Model.Constants.ExportCodeTypes.Powershell);
+
+            exportCode.ShowDialog();
+        }
+
+        private void cSharpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportCode exportCode = new ExportCode(Model.Constants.ExportCodeTypes.CSharp);
+
+            exportCode.ShowDialog();
+        }
     }
 
     public class ActionCategoryNode : TreeNode
