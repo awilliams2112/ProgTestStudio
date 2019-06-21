@@ -73,13 +73,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.uiAction1 = new ProgTestStudio.ActionControl();
-            this.arrowControl1 = new ProgTestStudio.ArrowControl();
-            this.uiAction2 = new ProgTestStudio.ActionControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.uiAction1 = new ProgTestStudio.ActionControl();
+            this.arrowControl1 = new ProgTestStudio.ArrowControl();
+            this.uiAction2 = new ProgTestStudio.ActionControl();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -95,6 +96,7 @@
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -129,20 +131,20 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.newToolStripMenuItem.Text = "New Project";
             // 
             // newTestToolStripMenuItem
             // 
             this.newTestToolStripMenuItem.Name = "newTestToolStripMenuItem";
-            this.newTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newTestToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.newTestToolStripMenuItem.Text = "New Test";
             this.newTestToolStripMenuItem.Click += new System.EventHandler(this.newTestToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.openToolStripMenuItem.Text = "Open Project";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -152,46 +154,46 @@
             this.cSharpToolStripMenuItem,
             this.powershellToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.toolStripMenuItem1.Text = "Export As";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // cSharpToolStripMenuItem
             // 
             this.cSharpToolStripMenuItem.Name = "cSharpToolStripMenuItem";
-            this.cSharpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cSharpToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.cSharpToolStripMenuItem.Text = "CSharp";
             this.cSharpToolStripMenuItem.Click += new System.EventHandler(this.cSharpToolStripMenuItem_Click);
             // 
             // powershellToolStripMenuItem
             // 
             this.powershellToolStripMenuItem.Name = "powershellToolStripMenuItem";
-            this.powershellToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.powershellToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.powershellToolStripMenuItem.Text = "Powershell";
             this.powershellToolStripMenuItem.Click += new System.EventHandler(this.powershellToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(140, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -287,7 +289,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.treeView1);
+            this.splitContainer1.Panel1.Controls.Add(this.panel4);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
@@ -299,11 +301,11 @@
             // 
             // treeView1
             // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.Indent = 30;
             this.treeView1.ItemHeight = 30;
-            this.treeView1.Location = new System.Drawing.Point(0, 23);
+            this.treeView1.Location = new System.Drawing.Point(5, 5);
             this.treeView1.Margin = new System.Windows.Forms.Padding(4);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Node1";
@@ -320,7 +322,7 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode4,
             treeNode5});
-            this.treeView1.Size = new System.Drawing.Size(280, 464);
+            this.treeView1.Size = new System.Drawing.Size(270, 593);
             this.treeView1.TabIndex = 2;
             this.treeView1.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeView1_ItemDrag);
             // 
@@ -435,39 +437,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // uiAction1
-            // 
-            this.uiAction1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uiAction1.Description = null;
-            this.uiAction1.DisplayName = "{Name}";
-            this.uiAction1.Location = new System.Drawing.Point(4, 4);
-            this.uiAction1.Margin = new System.Windows.Forms.Padding(4);
-            this.uiAction1.Name = "uiAction1";
-            this.uiAction1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.uiAction1.Size = new System.Drawing.Size(230, 118);
-            this.uiAction1.TabIndex = 0;
-            // 
-            // arrowControl1
-            // 
-            this.arrowControl1.BackColor = System.Drawing.Color.Transparent;
-            this.arrowControl1.Location = new System.Drawing.Point(242, 4);
-            this.arrowControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.arrowControl1.Name = "arrowControl1";
-            this.arrowControl1.Size = new System.Drawing.Size(114, 118);
-            this.arrowControl1.TabIndex = 1;
-            // 
-            // uiAction2
-            // 
-            this.uiAction2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uiAction2.Description = null;
-            this.uiAction2.DisplayName = "{Name}";
-            this.uiAction2.Location = new System.Drawing.Point(364, 4);
-            this.uiAction2.Margin = new System.Windows.Forms.Padding(4);
-            this.uiAction2.Name = "uiAction2";
-            this.uiAction2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.uiAction2.Size = new System.Drawing.Size(230, 118);
-            this.uiAction2.TabIndex = 0;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -504,6 +473,47 @@
             this.panel3.Size = new System.Drawing.Size(1146, 631);
             this.panel3.TabIndex = 5;
             // 
+            // uiAction1
+            // 
+            this.uiAction1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uiAction1.DisplayName = "{Name}";
+            this.uiAction1.Location = new System.Drawing.Point(4, 4);
+            this.uiAction1.Margin = new System.Windows.Forms.Padding(4);
+            this.uiAction1.Name = "uiAction1";
+            this.uiAction1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 25);
+            this.uiAction1.Size = new System.Drawing.Size(230, 118);
+            this.uiAction1.TabIndex = 0;
+            // 
+            // arrowControl1
+            // 
+            this.arrowControl1.BackColor = System.Drawing.Color.Transparent;
+            this.arrowControl1.Location = new System.Drawing.Point(242, 4);
+            this.arrowControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.arrowControl1.Name = "arrowControl1";
+            this.arrowControl1.Size = new System.Drawing.Size(114, 118);
+            this.arrowControl1.TabIndex = 1;
+            // 
+            // uiAction2
+            // 
+            this.uiAction2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uiAction2.DisplayName = "{Name}";
+            this.uiAction2.Location = new System.Drawing.Point(364, 4);
+            this.uiAction2.Margin = new System.Windows.Forms.Padding(4);
+            this.uiAction2.Name = "uiAction2";
+            this.uiAction2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 25);
+            this.uiAction2.Size = new System.Drawing.Size(230, 118);
+            this.uiAction2.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.treeView1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 23);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.panel4.Size = new System.Drawing.Size(280, 608);
+            this.panel4.TabIndex = 3;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +547,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,6 +598,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 

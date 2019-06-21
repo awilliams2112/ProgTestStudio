@@ -126,6 +126,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Content Include="Resources\iconfinder_database_1608662.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\iconfinder_database_16086621.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\iconfinder_language_326663.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\iconfinder_language_326663 %281%291.png" />
+    <Content Include="Resources\iconfinder_Sql_file_database_extension_data_3876341.png" />
+    <None Include="Resources\iconfinder_Sql_file_database_extension_data_38763411.png" />
     <Content Include="SampleExports\sample.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -196,7 +208,9 @@
     <None Include="Resources\PNGPIX-COM-Arrow-Transparent-PNG-Image-3-500x391.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconfinder_Arrow_Forward_1063879.png" />
+    <Content Include="Resources\iconfinder_Arrow_Forward_1063879.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="SampleExports\sample.ps1">

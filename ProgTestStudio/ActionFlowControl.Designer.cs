@@ -35,6 +35,7 @@
             // 
             this.FlowPanel.AllowDrop = true;
             this.FlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.FlowPanel.Location = new System.Drawing.Point(0, 0);
             this.FlowPanel.Name = "FlowPanel";
             this.FlowPanel.Padding = new System.Windows.Forms.Padding(15);

@@ -20,7 +20,7 @@ namespace ProgTestStudio
             InitializeComponent();
         }
 
-        public ActionControl(string actionType)
+        public ActionControl(Constants.ActionTypes actionType)
         {
             InitializeComponent();
 
@@ -29,9 +29,39 @@ namespace ProgTestStudio
             Margin = new System.Windows.Forms.Padding(5);
             Name = "uiAction1";
             TabIndex = 0;
-            DisplayName = actionType;
+            DisplayName = Constants.ActionTypeDefaultDescription(actionType);
             Size = new Size(154, 60);
-            
+
+            string imageLocation = string.Empty;
+
+
+            switch(actionType)
+            {
+                case Constants.ActionTypes.Sql:
+                    imageLocation = Constants.Images.SqlActionIcon;
+                    break;
+
+                case Constants.ActionTypes.Rest:
+                    imageLocation = Constants.Images.RestActionIcon;
+
+                    break;
+
+                case Constants.ActionTypes.Assert:
+                    imageLocation = "Resources\\iconfinder_language_326663.png";
+
+                    break;
+                    
+                case Constants.ActionTypes.Custom:
+                    imageLocation = "Resources\\iconfinder_language_326663.png";
+
+                    break;
+
+                default:
+                    break;
+            }
+
+            pictureBox1.ImageLocation = imageLocation;
+
             DoubleClick += (object sender1, EventArgs e1) =>
             {
                  ActionEditor task = new ActionEditor();
@@ -52,6 +82,5 @@ namespace ProgTestStudio
             }
         }
 
-        public string Description { get; set; }
     }
 }

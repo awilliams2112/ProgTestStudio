@@ -73,6 +73,36 @@ namespace ProgTestStudio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_database_1608662 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_database_1608662", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_language_326663__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_language_326663 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Sql_file_database_extension_data_3876341 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Sql_file_database_extension_data_3876341", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rest {
             get {
                 object obj = ResourceManager.GetObject("rest", resourceCulture);
