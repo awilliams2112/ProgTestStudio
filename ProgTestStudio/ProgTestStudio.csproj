@@ -56,6 +56,12 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActionEditor_Assert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionEditor_Assert.Designer.cs">
+      <DependentUpon>ActionEditor_Assert.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActionEditor_Custom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ActionBase.cs" />
+    <Compile Include="Model\AssertAction.cs" />
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\CustomAction.cs" />
     <Compile Include="Model\ProjectFile.cs" />
@@ -154,6 +161,9 @@
     <Compile Include="HintTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ActionEditor_Assert.resx">
+      <DependentUpon>ActionEditor_Assert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActionEditor_Custom.resx">
       <DependentUpon>ActionEditor_Custom.cs</DependentUpon>
     </EmbeddedResource>
