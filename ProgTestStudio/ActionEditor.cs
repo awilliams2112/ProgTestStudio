@@ -29,6 +29,14 @@ namespace ProgTestStudio
             return this;
         }
 
+        public ActionBase Model
+        {
+            get
+            {
+                return _model;
+            }
+        }
+
         private void BtnOk_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
@@ -40,7 +48,7 @@ namespace ProgTestStudio
             if (_model.Position != NumBoxPosition.Value)
                 BusinessLogic.Instance.ReconcilePosition(_model.Position, decimal.ToInt32(NumBoxPosition.Value));
 
-            BusinessLogic.Instance.Data[_model.Position] = _model;
+            //BusinessLogic.Instance.Data[_model.Position] = _model;
             Close();
         }
 

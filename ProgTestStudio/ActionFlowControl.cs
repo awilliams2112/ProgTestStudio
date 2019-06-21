@@ -36,7 +36,7 @@ namespace ProgTestStudio
                 this.FlowPanel.Controls.Add(new ArrowControl());
             }
 
-            var actionControl = new ActionControl(Constants.GetActionTypeFromName(actionTreeNode.Text));
+            var actionControl = new ActionControl(Constants.GetActionTypeFromName(actionTreeNode.Text), actionTreeNode.Text);
             this.FlowPanel.Controls.Add(actionControl);
         }
 

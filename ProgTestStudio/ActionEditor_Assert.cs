@@ -16,10 +16,22 @@ namespace ProgTestStudio
             GridAssertions.DataSource = new Dictionary<string, string>();
         }
 
+        public ActionBase Model
+        {
+            get
+            {
+                return _model;
+            }
+        }
+
         public void PopulateForm(AssertAction model)
         {
             _model = model;
+
+            TxtBoxName.Text = _model.Name;
         }
+
+
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
@@ -31,7 +43,7 @@ namespace ProgTestStudio
             if (_model.Position != NumBoxPosition.Value)
                 BusinessLogic.Instance.ReconcilePosition(_model.Position, decimal.ToInt32(NumBoxPosition.Value));
 
-            BusinessLogic.Instance.Data[_model.Position] = _model;
+            //BusinessLogic.Instance.Data[_model.Position] = _model;
             Close();
         }
 

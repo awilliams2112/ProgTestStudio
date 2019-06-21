@@ -13,7 +13,6 @@ namespace ProgTestStudio
 {
     public partial class ActionControl : UserControl
     {
-        TestAction testAction;
         Constants.ActionTypes _actionType;
 
         public ActionControl()
@@ -21,7 +20,7 @@ namespace ProgTestStudio
             InitializeComponent();
         }
 
-        public ActionControl(Constants.ActionTypes actionType)
+        public ActionControl(Constants.ActionTypes actionType, string display = null)
         {
             _actionType = actionType;
 
@@ -32,7 +31,12 @@ namespace ProgTestStudio
             Margin = new System.Windows.Forms.Padding(5);
             Name = "uiAction1";
             TabIndex = 0;
-            DisplayName = Constants.ActionTypeDefaultDescription(actionType);
+
+            if (actionType == Constants.ActionTypes.Custom)
+                DisplayName = display.Trim();
+            else
+                DisplayName = Constants.ActionTypeDefaultDescription(actionType);
+
             Size = new Size(154, 60);
 
             string imageLocation = string.Empty;
@@ -101,33 +105,57 @@ namespace ProgTestStudio
             {
                 case Constants.ActionTypes.Sql:
 
-                    new ActionEditor_Sql()
-                        .PopulateForm(new SqlAction())
-                        .ShowDialog();
+                    var act_sql = new ActionEditor_Sql();
+                    act_sql.Name = DisplayName;
+                    act_sql.PopulateForm(new SqlAction()
+                    {
+                        Name = DisplayName
+                    });
+                        
+                    if (DialogResult.OK == act_sql.ShowDialog())
+                        DisplayName = act_sql.Model.Name;
 
                     break;
 
                 case Constants.ActionTypes.Rest:
 
-                    new ActionEditor()
-                        .PopulateForm(new RestAction())
-                        .ShowDialog();
+                    var act_rest = new ActionEditor();
+                    act_rest.Name = DisplayName;
+                    act_rest.PopulateForm(new RestAction()
+                    {
+                        Name = DisplayName
+                    });
+
+                    if (DialogResult.OK == act_rest.ShowDialog())
+                        DisplayName = act_rest.Model.Name;
 
                     break;
 
                 case Constants.ActionTypes.Assert:
 
-                    new ActionEditor_Sql()
-                        .PopulateForm(new SqlAction())
-                        .ShowDialog();
+                    var act_assert = new ActionEditor_Assert();
+                    act_assert.Name = DisplayName;
+                    act_assert.PopulateForm(new AssertAction()
+                    {
+                        Name = DisplayName
+                    });
+
+                    if (DialogResult.OK == act_assert.ShowDialog())
+                        DisplayName = act_assert.Model.Name;
 
                     break;
 
                 case Constants.ActionTypes.Custom:
 
-                    new ActionEditor_Custom()
-                        .PopulateForm(new CustomAction())
-                        .ShowDialog();
+                    var act_custom = new ActionEditor_Custom();
+                    act_custom.Name = DisplayName;
+                    act_custom.PopulateForm(new CustomAction()
+                    {
+                        Name = DisplayName
+                    });
+
+                    if (DialogResult.OK == act_custom.ShowDialog())
+                        DisplayName = act_custom.Model.Name;
 
                     break;
 

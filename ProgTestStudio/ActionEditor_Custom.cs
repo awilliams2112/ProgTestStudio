@@ -14,9 +14,19 @@ namespace ProgTestStudio
             InitializeComponent();
         }
 
+        public ActionBase Model
+        {
+            get
+            {
+                return _model;
+            }
+        }
+
         public ActionEditor_Custom PopulateForm(CustomAction model)
         {
             _model = model;
+
+            TxtBoxName.Text = _model.Name;
 
             return this;
         }
@@ -30,7 +40,7 @@ namespace ProgTestStudio
             if (_model.Position != NumBoxPosition.Value)
                 BusinessLogic.Instance.ReconcilePosition(_model.Position, decimal.ToInt32(NumBoxPosition.Value));
 
-            BusinessLogic.Instance.Data[_model.Position] = _model;
+            //BusinessLogic.Instance.Data[_model.Position] = _model;
             Close();
         }
 

@@ -78,6 +78,7 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uiAction1 = new ProgTestStudio.ActionControl();
             this.arrowControl1 = new ProgTestStudio.ArrowControl();
             this.uiAction2 = new ProgTestStudio.ActionControl();
@@ -105,6 +106,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
+            this.debugToolStripMenuItem,
             this.projectToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -365,7 +367,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
             this.splitContainer2.Panel2.Controls.Add(this.panel1);
             this.splitContainer2.Size = new System.Drawing.Size(862, 631);
-            this.splitContainer2.SplitterDistance = 581;
+            this.splitContainer2.SplitterDistance = 450;
             this.splitContainer2.TabIndex = 2;
             // 
             // tabControl1
@@ -376,7 +378,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(862, 581);
+            this.tabControl1.Size = new System.Drawing.Size(862, 450);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -386,7 +388,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(854, 555);
+            this.tabPage1.Size = new System.Drawing.Size(854, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -398,7 +400,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(848, 549);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(848, 418);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -408,7 +410,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 31);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.panel2.Size = new System.Drawing.Size(862, 15);
+            this.panel2.Size = new System.Drawing.Size(862, 146);
             this.panel2.TabIndex = 1;
             // 
             // richTextBox1
@@ -417,7 +419,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(856, 2);
+            this.richTextBox1.Size = new System.Drawing.Size(856, 133);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -465,6 +467,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(51, 22);
             this.toolStripButton2.Text = "Save";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton1
             // 
@@ -473,6 +476,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(77, 22);
             this.toolStripButton1.Text = "Run Tests";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // panel3
             // 
@@ -482,6 +486,12 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1146, 631);
             this.panel3.TabIndex = 5;
+            // 
+            // debugToolStripMenuItem
+            // 
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.debugToolStripMenuItem.Text = "Debug";
             // 
             // uiAction1
             // 
@@ -527,7 +537,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Progressive Test Studio";
+            this.Text = "Progressive Test Studio ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -599,6 +609,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
     }
 }
 

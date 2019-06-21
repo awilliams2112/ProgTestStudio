@@ -49,21 +49,29 @@ namespace ProgTestStudio
                 new TreeNode("Custom",
                     new ActionTreeNode []
                     {
-                        new ActionTreeNode("Custom1            ")
+                        new ActionTreeNode("Send Email            ")
                         {
                             ImageKey = "custom"
                         },
-                        new ActionTreeNode("Custom2           ")
+                        new ActionTreeNode("Send Text          ")
                         {
                             ImageKey = "custom"
                         },
-                        new ActionTreeNode("Custom3         ")
+                        new ActionTreeNode("Create Application            ")
+                        {
+                            ImageKey = "custom"
+                        },
+                        new ActionTreeNode("Create Lease           ")
+                        {
+                            ImageKey = "custom"
+                        },
+                        new ActionTreeNode("Update Client         ")
                         {
                             ImageKey = "custom"
                         }
                     })
             });
-
+            
             this.treeView1.ExpandAll();
 
             this.tabControl1.TabPages.Clear();
@@ -107,14 +115,7 @@ namespace ProgTestStudio
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Filter = "Test Studio Projects |*.tsproj";
-
-            var dialogResult = saveFileDialog1.ShowDialog();
-            
-            if(dialogResult == DialogResult.OK)
-            {
-                SaveProfileFile(saveFileDialog1.FileName);
-            }
+            Save();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -141,7 +142,7 @@ namespace ProgTestStudio
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            Save();
         }
 
         private void allToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,6 +213,28 @@ namespace ProgTestStudio
             ExportCode exportCode = new ExportCode(Model.Constants.ExportCodeTypes.CSharp);
 
             exportCode.ShowDialog();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            RunTests();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private void Save()
+        {
+            saveFileDialog1.Filter = "Test Studio Projects |*.tsproj";
+
+            var dialogResult = saveFileDialog1.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                SaveProfileFile(saveFileDialog1.FileName);
+            }
         }
     }
 
