@@ -44,6 +44,7 @@
             this.nameLbl.TabIndex = 0;
             this.nameLbl.Text = "Rest";
             this.nameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nameLbl.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.nameLbl_MouseDoubleClick);
             // 
             // pictureBox1
             // 
@@ -54,6 +55,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDoubleClick);
             // 
             // ActionControl
             // 
@@ -64,6 +66,7 @@
             this.Controls.Add(this.nameLbl);
             this.Name = "ActionControl";
             this.Size = new System.Drawing.Size(154, 60);
+            this.DoubleClick += new System.EventHandler(this.ActionControl_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

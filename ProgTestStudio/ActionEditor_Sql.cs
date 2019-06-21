@@ -16,7 +16,7 @@ namespace ProgTestStudio
             GridParameters.DataSource = new Dictionary<string, string>();
         }
 
-        public void PopulateForm(SqlAction model)
+        public ActionEditor_Sql PopulateForm(SqlAction model)
         {
             TxtBoxConnection.Text = model.ConectionString;
             RichStatement.Text = model.Statement;
@@ -25,6 +25,8 @@ namespace ProgTestStudio
             NumBoxPosition.Value = model.Position;
 
             _model = model;
+
+            return this;
         }
 
         private void BtnOk_Click(object sender, EventArgs e)

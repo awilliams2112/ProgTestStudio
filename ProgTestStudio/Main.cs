@@ -44,6 +44,8 @@ namespace ProgTestStudio
                     }),
             });
 
+            this.treeView1.ExpandAll();
+
             this.tabControl1.TabPages.Clear();
             this.tabControl1.TabPages.Add(new TestTab());
         }

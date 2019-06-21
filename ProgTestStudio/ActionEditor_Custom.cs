@@ -14,9 +14,11 @@ namespace ProgTestStudio
             InitializeComponent();
         }
 
-        public void PopulateForm(CustomAction model)
+        public ActionEditor_Custom PopulateForm(CustomAction model)
         {
             _model = model;
+
+            return this;
         }
 
         private void BtnOk_Click(object sender, EventArgs e)

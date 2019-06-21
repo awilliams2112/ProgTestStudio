@@ -22,7 +22,7 @@ namespace ProgTestStudio
             GridHeaders.DataSource = new Dictionary<string, string>();
         }
 
-        public void PopulateForm(RestAction model)
+        public ActionEditor PopulateForm(RestAction model)
         {
             TxtBoxUrl.Text = model.Url;
             GridHeaders.DataSource = model.Headers;
@@ -31,6 +31,8 @@ namespace ProgTestStudio
             NumBoxPosition.Value = model.Position;
 
             _model = model;
+
+            return this;
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
