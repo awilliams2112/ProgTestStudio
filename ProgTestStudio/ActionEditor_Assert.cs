@@ -1,6 +1,7 @@
 ﻿using ProgTestStudio.Controller;
 using ProgTestStudio.Model;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ProgTestStudio
@@ -12,6 +13,7 @@ namespace ProgTestStudio
         public ActionEditor_Assert()
         {
             InitializeComponent();
+            GridAssertions.DataSource = new Dictionary<string, string>();
         }
 
         public void PopulateForm(AssertAction model)
@@ -23,6 +25,7 @@ namespace ProgTestStudio
         {
             DialogResult = DialogResult.OK;
 
+            _model.Assertions = GridAssertions.DataSource.ToString();
             _model.Name = TxtBoxName.Text;
 
             if (_model.Position != NumBoxPosition.Value)

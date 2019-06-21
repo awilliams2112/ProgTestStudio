@@ -149,6 +149,9 @@
     <Compile Include="HintTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ActionEditor_Assert.resx">
+      <DependentUpon>ActionEditor_Assert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActionEditor_Custom.resx">
       <DependentUpon>ActionEditor_Custom.cs</DependentUpon>
     </EmbeddedResource>
