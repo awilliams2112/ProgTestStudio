@@ -13,6 +13,7 @@ namespace ProgTestStudio
         public ActionEditor_Sql()
         {
             InitializeComponent();
+            GridParameters.DataSource = new Dictionary<string, string>();
         }
 
         public void PopulateForm(SqlAction model)
@@ -56,10 +57,8 @@ namespace ProgTestStudio
             {
                 BusinessLogic.Instance.Data.Remove(_model);
             }
-            else
-            {
-                Close();
-            }
+
+            Close();
         }
     }
 }

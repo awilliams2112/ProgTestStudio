@@ -34,6 +34,7 @@
             this.RichPayload = new System.Windows.Forms.RichTextBox();
             this.LblPayload = new System.Windows.Forms.Label();
             this.SplitterDetails = new System.Windows.Forms.SplitContainer();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.NumBoxPosition = new System.Windows.Forms.NumericUpDown();
             this.TxtBoxName = new System.Windows.Forms.TextBox();
             this.LblName = new System.Windows.Forms.Label();
@@ -41,14 +42,13 @@
             this.LblTypeValue = new System.Windows.Forms.Label();
             this.LblPosition = new System.Windows.Forms.Label();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.GrpBoxDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).BeginInit();
             this.SplitterDetails.Panel1.SuspendLayout();
             this.SplitterDetails.Panel2.SuspendLayout();
             this.SplitterDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnOk
@@ -124,6 +124,16 @@
             this.SplitterDetails.SplitterDistance = 516;
             this.SplitterDetails.TabIndex = 2;
             // 
+            // PicLogo
+            // 
+            this.PicLogo.BackgroundImage = global::ProgTestStudio.Properties.Resources.rest;
+            this.PicLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PicLogo.Location = new System.Drawing.Point(23, 20);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(100, 106);
+            this.PicLogo.TabIndex = 12;
+            this.PicLogo.TabStop = false;
+            // 
             // NumBoxPosition
             // 
             this.NumBoxPosition.Location = new System.Drawing.Point(269, 97);
@@ -185,16 +195,6 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // PicLogo
-            // 
-            this.PicLogo.BackgroundImage = global::ProgTestStudio.Properties.Resources.rest;
-            this.PicLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PicLogo.Location = new System.Drawing.Point(23, 20);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(100, 106);
-            this.PicLogo.TabIndex = 12;
-            this.PicLogo.TabStop = false;
-            // 
             // ActionEditor_Custom
             // 
             this.AcceptButton = this.BtnOk;
@@ -215,7 +215,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Action Editor";
-            this.TopMost = true;
             this.GrpBoxDetails.ResumeLayout(false);
             this.GrpBoxDetails.PerformLayout();
             this.SplitterDetails.Panel1.ResumeLayout(false);
@@ -223,8 +222,8 @@
             this.SplitterDetails.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitterDetails)).EndInit();
             this.SplitterDetails.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPosition)).EndInit();
             this.ResumeLayout(false);
 
         }

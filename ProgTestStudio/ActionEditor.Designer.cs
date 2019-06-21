@@ -328,7 +328,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Action Editor";
-            this.TopMost = true;
             this.GrpBoxDetails.ResumeLayout(false);
             this.GrpBoxDetails.PerformLayout();
             this.GrpBoxMethod.ResumeLayout(false);
