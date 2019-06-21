@@ -40,6 +40,12 @@ namespace ProgTestStudio
             this.FlowPanel.Controls.Add(actionControl);
         }
 
+        public void AddControl(Control actionControl)
+        {
+            this.FlowPanel.Controls.Add(actionControl);
+
+        }
+
         /// <summary>
         /// Drag enter event
         /// </summary>

@@ -20,7 +20,22 @@ namespace ProgTestStudio
             Id = Guid.NewGuid().ToString();
         }
 
+        public TestTab(bool autoDefault) : base()
+        {
+            testName = this.Text;
+            InitializeComponents();
+            Id = Guid.NewGuid().ToString();
+
+            Text = "CCM Test Case";
+            actionFlowControl.AddControl(new ActionControl(Model.Constants.ActionTypes.Rest, "POST Email Event"));
+            actionFlowControl.AddControl(new ArrowControl());
+            actionFlowControl.AddControl(new ActionControl(Model.Constants.ActionTypes.Sql, "Check CCM Db"));
+            actionFlowControl.AddControl(new ArrowControl());
+            actionFlowControl.AddControl(new ActionControl(Model.Constants.ActionTypes.Assert, "Validate Email Sent"));
+        }
+
         public Action<string> OnDelete;
+        public Action<string> OnCreateCustomAction;
 
         public string Id { get; private set; }
 
@@ -58,13 +73,23 @@ namespace ProgTestStudio
             cm.MenuItems.Add(new MenuItem("Rename", (object sender, EventArgs e) => 
             {
                 TextEntryForm testNameForm = new TextEntryForm("Enter Test Name:");
-                testNameForm.ShowDialog();
 
-
+                if (DialogResult.OK == testNameForm.ShowDialog())
+                {
+                    Text = testNameForm.Entry;
+                }
             }));
 
             cm.MenuItems.Add(new MenuItem("Create Custom Action", (object sender, EventArgs e) =>
             {
+                TextEntryForm testNameForm = new TextEntryForm("Enter Custom Action Name:");
+
+                if (DialogResult.OK == testNameForm.ShowDialog())
+                {
+                    if (OnCreateCustomAction != null)
+                        OnCreateCustomAction(testNameForm.Entry);
+                }
+
 
             }));
 

@@ -28,15 +28,29 @@ namespace ProgTestStudio
             switch (exportCodeType)
             {
                 case ExportCodeTypes.CSharp:
+                    Text = "Export to CSharp";
                     exportedCode = File.ReadAllText("SampleExports\\sample.cs");
 
                     break;
 
                 case ExportCodeTypes.Powershell:
+                    Text = "Export to Powershell";
                     exportedCode = File.ReadAllText("SampleExports\\sample.ps1");
                     break;
 
+                case ExportCodeTypes.Java:
+                    Text = "Export to Java";
+                    exportedCode = File.ReadAllText("SampleExports\\sample.java");
+                    break;
+
+                case ExportCodeTypes.Python:
+                    Text = "Export to Python";
+                    exportedCode = File.ReadAllText("SampleExports\\sample.py");
+                    break;
+
                 default:
+                    Text = "Export to Python";
+
                     break;
             }
 

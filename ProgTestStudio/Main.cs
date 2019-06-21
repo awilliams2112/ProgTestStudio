@@ -75,7 +75,7 @@ namespace ProgTestStudio
             this.treeView1.ExpandAll();
 
             this.tabControl1.TabPages.Clear();
-            this.tabControl1.TabPages.Add(new TestTab());
+            this.tabControl1.TabPages.Add(CreateTab(false));
         }
 
         #region private methods
@@ -88,6 +88,35 @@ namespace ProgTestStudio
                 
                 //read file
             }
+
+            tabControl1.TabPages.Clear();
+            tabControl1.TabPages.Add(CreateTab(true));
+            tabControl1.SelectedTab = tabControl1.TabPages[tabControl1.TabPages.Count - 1];
+
+        }
+
+        private TestTab CreateTab(bool setdefault)
+        {
+            TestTab newTab;
+            if (setdefault)
+            {
+                newTab = new TestTab(setdefault);
+            }
+            else
+            {
+                newTab = new TestTab();
+            }
+
+            newTab.OnCreateCustomAction = (name) =>
+            {
+                treeView1.Nodes[1].Nodes.Add(new ActionTreeNode(name)
+                {
+                    ImageKey = "custom"
+                });
+            };
+
+            return newTab;
+
         }
 
         private void SaveProfileFile(string fileName)
@@ -109,8 +138,7 @@ namespace ProgTestStudio
         
         private void newTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add(new TestTab());
-            tabControl1.SelectedTab = tabControl1.TabPages[tabControl1.TabPages.Count - 1];
+
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -165,35 +193,24 @@ namespace ProgTestStudio
             Application.DoEvents();
             
 
-            this.Invoke(new Action(() =>
+            for(int i = 0; i< 3;i++)
             {
-                richTextBox1.AppendText("Running Test {TestName}...\n");
-                Application.DoEvents();
+                this.Invoke(new Action(() =>
+                {
+                    richTextBox1.AppendText("Running Test {TestName}... ");
+                    Application.DoEvents();
 
-                Thread.Sleep(500);
-            }));
+                    Thread.Sleep(500);
 
-            richTextBox1.AppendText("Test {TestName} Passed\n\n");
+                    richTextBox1.AppendText("PASSED\n\n", Color.Green);
+                    Thread.Sleep(100);
+                    Application.DoEvents();
+                    
+                }));
 
-            this.Invoke(new Action(() =>
-            {
-                richTextBox1.AppendText("Running Test {TestName}...\n");
-                Application.DoEvents();
+                
 
-                Thread.Sleep(500);
-            }));
-            
-            richTextBox1.AppendText("Test {TestName} Passed\n\n");
-            
-            this.Invoke(new Action(() =>
-            {
-                richTextBox1.AppendText("Running Test {TestName}...\n");
-                Thread.Sleep(500);
-                Application.DoEvents();
-            }));
-
-            richTextBox1.AppendText("Test {TestName} Passed\n\n");
-
+            }
         }
 
         private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
@@ -211,6 +228,20 @@ namespace ProgTestStudio
         private void cSharpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExportCode exportCode = new ExportCode(Model.Constants.ExportCodeTypes.CSharp);
+
+            exportCode.ShowDialog();
+        }
+
+        private void javaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportCode exportCode = new ExportCode(Model.Constants.ExportCodeTypes.Java);
+
+            exportCode.ShowDialog();
+        }
+
+        private void pythonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportCode exportCode = new ExportCode(Model.Constants.ExportCodeTypes.Python);
 
             exportCode.ShowDialog();
         }
@@ -236,26 +267,31 @@ namespace ProgTestStudio
                 SaveProfileFile(saveFileDialog1.FileName);
             }
         }
-    }
 
-    public class ActionCategoryNode : TreeNode
-    {
-        public ActionCategoryNode(string displayName) : base(displayName)
+        private void addTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            tabControl1.TabPages.Add(CreateTab(false));
+            tabControl1.SelectedTab = tabControl1.TabPages[tabControl1.TabPages.Count - 1];
         }
 
-        public ActionCategoryNode(string displayName, ActionTreeNode [] childrenNodes ) : base(displayName, childrenNodes)
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            tabControl1.TabPages.Clear();
+            tabControl1.TabPages.Add(CreateTab(false));
+            tabControl1.SelectedTab = tabControl1.TabPages[tabControl1.TabPages.Count - 1];
         }
     }
 
-    public class ActionTreeNode: TreeNode
+    public static class RichTextBoxExtensions
     {
-        public ActionTreeNode(string displayName) : base(displayName)
+        public static void AppendText(this RichTextBox box, string text, Color color)
         {
+            box.SelectionStart = box.TextLength;
+            box.SelectionLength = 0;
 
+            box.SelectionColor = color;
+            box.AppendText(text);
+            box.SelectionColor = box.ForeColor;
         }
     }
 }

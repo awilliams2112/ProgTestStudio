@@ -11,7 +11,9 @@ namespace ProgTestStudio.Model
         public enum ExportCodeTypes
         {
             CSharp,
-            Powershell
+            Powershell,
+            Java,
+            Python
         }
 
         public enum ActionTypes
