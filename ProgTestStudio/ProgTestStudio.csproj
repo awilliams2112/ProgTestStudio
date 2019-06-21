@@ -157,8 +157,12 @@
     <None Include="Resources\iconfinder_language_326663 %281%291.png" />
     <Content Include="Resources\iconfinder_Sql_file_database_extension_data_3876341.png" />
     <None Include="Resources\iconfinder_Sql_file_database_extension_data_38763411.png" />
-    <Content Include="SampleExports\sample.java" />
-    <None Include="SampleExports\sample.py" />
+    <Content Include="SampleExports\sample.java">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleExports\sample.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleExports\sample.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
