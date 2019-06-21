@@ -20,8 +20,12 @@ namespace ProgTestStudio
             InitializeComponent();
 
             this.treeView1.ImageList = new ImageList();
+
+            this.treeView1.ImageList.Images.Add("blank", Image.FromFile(Constants.Images.Transparent));
             this.treeView1.ImageList.Images.Add("sql", Image.FromFile(Constants.Images.SqlActionIcon));
             this.treeView1.ImageList.Images.Add("rest", Image.FromFile(Constants.Images.RestActionIcon));
+            this.treeView1.ImageList.Images.Add("assert", Image.FromFile(Constants.Images.AssertActionIcon));
+            this.treeView1.ImageList.Images.Add("custom", Image.FromFile(Constants.Images.CustomActionIcon));
 
             this.treeView1.Nodes.Clear();
             this.treeView1.Nodes.AddRange(new TreeNode[]
@@ -39,9 +43,25 @@ namespace ProgTestStudio
                         },
                         new ActionTreeNode("Assert         ")
                         {
-                            ImageKey = Constants.Images.AssertActionIcon
+                            ImageKey = "assert"
                         }
                     }),
+                new TreeNode("Custom",
+                    new ActionTreeNode []
+                    {
+                        new ActionTreeNode("Custom1            ")
+                        {
+                            ImageKey = "custom"
+                        },
+                        new ActionTreeNode("Custom2           ")
+                        {
+                            ImageKey = "custom"
+                        },
+                        new ActionTreeNode("Custom3         ")
+                        {
+                            ImageKey = "custom"
+                        }
+                    })
             });
 
             this.treeView1.ExpandAll();

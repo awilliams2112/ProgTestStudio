@@ -25,10 +25,11 @@ namespace ProgTestStudio.Model
 
         public class Images
         {
+            public static string Transparent = "Resources\\blank.png";
             public static string SqlActionIcon = "Resources\\iconfinder_database_1608662.png";
             public static string RestActionIcon = "Resources\\iconfinder_language_326663.png";
-            public static string AssertActionIcon = "Resources\\iconfinder_database_1608662.png";
-            public static string CustomActionIcon = "Resources\\iconfinder_database_1608662.png";
+            public static string AssertActionIcon = "Resources\\iconfinder_check-box-outline_326561.png";
+            public static string CustomActionIcon = "Resources\\iconfinder_icon-ios7-gear-outline_211750.png";
 
         }
 

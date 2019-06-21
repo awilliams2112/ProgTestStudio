@@ -49,16 +49,15 @@ namespace ProgTestStudio
                     break;
 
                 case Constants.ActionTypes.Assert:
-                    imageLocation = "Resources\\iconfinder_language_326663.png";
 
-                    break;
-
-                case Constants.ActionTypes.Custom:
-                    imageLocation = "Resources\\iconfinder_language_326663.png";
-
+                    imageLocation = Constants.Images.AssertActionIcon;
+                    
                     break;
 
                 default:
+
+                    imageLocation = Constants.Images.CustomActionIcon;
+
                     break;
             }
             pictureBox1.ImageLocation = imageLocation;

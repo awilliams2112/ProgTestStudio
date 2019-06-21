@@ -63,6 +63,26 @@ namespace ProgTestStudio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow1 {
+            get {
+                object obj = ResourceManager.GetObject("arrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blank {
+            get {
+                object obj = ResourceManager.GetObject("blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Arrow_Forward_1063879 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Arrow_Forward_1063879", resourceCulture);
@@ -73,9 +93,29 @@ namespace ProgTestStudio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_check_box_outline_326561 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_check_box_outline_326561", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_database_1608662 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_database_1608662", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_icon_ios7_gear_outline_211750 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_icon_ios7_gear_outline_211750", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
