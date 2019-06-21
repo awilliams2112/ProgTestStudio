@@ -5,16 +5,16 @@ using System.Windows.Forms;
 
 namespace ProgTestStudio
 {
-    public partial class ActionEditor_Custom : Form
+    public partial class ActionEditor_Assert : Form
     {
-        private CustomAction _model;
+        private AssertAction _model;
 
-        public ActionEditor_Custom()
+        public ActionEditor_Assert()
         {
             InitializeComponent();
         }
 
-        public void PopulateForm(CustomAction model)
+        public void PopulateForm(AssertAction model)
         {
             _model = model;
         }
