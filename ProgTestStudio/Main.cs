@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -52,7 +53,7 @@ namespace ProgTestStudio
 
         #endregion
 
-        #region
+        #region events
 
         private void treeView1_ItemDrag(object sender, ItemDragEventArgs e)
         {
@@ -102,7 +103,80 @@ namespace ProgTestStudio
 
         #endregion
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void allToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunTests();
+        }
+
+        private void selectedTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunTests();
+        }
+
+        private void RunTests()
+        {
+            //simulate test
+
+            richTextBox1.Clear();
+
+            richTextBox1.AppendText("Running Test Suite...\n\n");
+            Application.DoEvents();
+            
+
+            this.Invoke(new Action(() =>
+            {
+                richTextBox1.AppendText("Running Test {TestName}...\n");
+                Application.DoEvents();
+
+                Thread.Sleep(500);
+            }));
+
+            richTextBox1.AppendText("Test {TestName} Passed\n\n");
+
+            this.Invoke(new Action(() =>
+            {
+                richTextBox1.AppendText("Running Test {TestName}...\n");
+                Application.DoEvents();
+
+                Thread.Sleep(500);
+            }));
+            
+            richTextBox1.AppendText("Test {TestName} Passed\n\n");
+            
+            this.Invoke(new Action(() =>
+            {
+                richTextBox1.AppendText("Running Test {TestName}...\n");
+                Thread.Sleep(500);
+                Application.DoEvents();
+            }));
+
+            richTextBox1.AppendText("Test {TestName} Passed\n\n");
+
+        }
+
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void powershellToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportCode exportCode = new ExportCode(Model.Constants.ExportCodeTypes.Powershell);
+
+            exportCode.ShowDialog();
+        }
+
+        private void cSharpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportCode exportCode = new ExportCode(Model.Constants.ExportCodeTypes.CSharp);
+
+            exportCode.ShowDialog();
+        }
     }
 
     public class ActionCategoryNode : TreeNode

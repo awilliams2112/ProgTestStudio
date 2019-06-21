@@ -59,6 +59,8 @@ namespace ProgTestStudio
             {
                 TextEntryForm testNameForm = new TextEntryForm("Enter Test Name:");
                 testNameForm.ShowDialog();
+
+
             }));
 
             cm.MenuItems.Add(new MenuItem("Create Custom Action", (object sender, EventArgs e) =>

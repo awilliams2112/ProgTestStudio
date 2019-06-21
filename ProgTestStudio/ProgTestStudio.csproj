@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,6 +93,12 @@
       <DependentUpon>ArrowControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\BusinessLogic.cs" />
+    <Compile Include="ExportCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportCode.Designer.cs">
+      <DependentUpon>ExportCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +106,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ActionBase.cs" />
+    <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\CustomAction.cs" />
     <Compile Include="Model\ProjectFile.cs" />
     <Compile Include="Model\ProjectTest.cs" />
@@ -118,6 +126,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Content Include="SampleExports\sample.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="TextEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ArrowControl.resx">
       <DependentUpon>ArrowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportCode.resx">
+      <DependentUpon>ExportCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -184,7 +198,11 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_Arrow_Forward_1063879.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SampleExports\sample.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rest.png" />
   </ItemGroup>
